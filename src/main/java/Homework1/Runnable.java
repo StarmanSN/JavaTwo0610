@@ -1,6 +1,6 @@
 package Homework1;
 
-public interface AbilityToRun {
+public interface Runnable {
     default void run() {
         System.out.println("Бежит");
     }
