@@ -1,10 +1,10 @@
 package Homework1;
 
-public class Cat implements AbilityToJump, AbilityToRun, Compete {
+public class Cat implements Jumpable, Runnable, Competitor {
     private String nickname;
     private int age;
-    private double runDistance;
-    private double jumpHeight;
+    private int maxDistance = 100;
+    private double maxHeight = 1;
 
     public Cat() {
 
@@ -15,12 +15,6 @@ public class Cat implements AbilityToJump, AbilityToRun, Compete {
         this.age = age;
     }
 
-    public Cat(String nickname, int age, double runDistance, double jumpHeight) {
-        this.nickname = nickname;
-        this.age = age;
-        this.runDistance = runDistance;
-        this.jumpHeight = jumpHeight;
-    }
 
     public String getNickname() {
         return nickname;
@@ -42,31 +36,31 @@ public class Cat implements AbilityToJump, AbilityToRun, Compete {
         }
     }
 
-    public double getRunDistance() {
-        return runDistance;
+    public double getMaxDistance() {
+        return maxDistance;
     }
 
-    public void setRunDistance(double runDistance) {
-        if (runDistance > 0 && runDistance < 100) {
+    public void setMaxDistance(int maxDistance) {
+        if (maxDistance > 0 && maxDistance < 100) {
 
-            this.runDistance = runDistance;
-            System.out.println("Кот по кличке " + this.nickname + " стог пробежать дистанцию в " + runDistance + " метров.");
-        } else if (runDistance >= 100) {
-            runDistance = 100;
-            System.out.println("Кот по кличке " + this.nickname + " пробежал " + runDistance + " метров, но ему лень бежать бельше.");
+            this.maxDistance = maxDistance;
+            System.out.println("Кот по кличке " + this.nickname + " стог пробежать дистанцию в " + maxDistance + " метров.");
+        } else if (maxDistance >= 100) {
+            maxDistance = 100;
+            System.out.println("Кот по кличке " + this.nickname + " пробежал " + maxDistance + " метров, но ему лень бежать бельше.");
         }
     }
 
-    public double getJumpHeight() {
-        return jumpHeight;
+    public double getMaxHeight() {
+        return maxHeight;
     }
 
-    public void setJumpHeight(double jumpHeight) {
-        if (jumpHeight >= 0 && jumpHeight < 1) {
-            this.jumpHeight = jumpHeight;
-            System.out.println("Кот по кличке " + this.nickname + " стог перепрыгнуть препятствие в " + jumpHeight + " метра.");
-        } else if (jumpHeight >= 1) {
-            jumpHeight = 1;
+    public void setMaxHeight(double maxHeight) {
+        if (maxHeight >= 0 && maxHeight < 1) {
+            this.maxHeight = maxHeight;
+            System.out.println("Кот по кличке " + this.nickname + " стог перепрыгнуть препятствие в " + maxHeight + " метра.");
+        } else if (maxHeight >= 1) {
+            maxHeight = 1;
             System.out.println(this.nickname + " лень прыгать выше 1 метра.");
         }
 
@@ -84,8 +78,31 @@ public class Cat implements AbilityToJump, AbilityToRun, Compete {
 
     }
 
+
     @Override
-    public void doSomething() {
+    public int maxDistance() {
+        if (maxDistance > 0 && maxDistance < 100) {
+
+            this.maxDistance = maxDistance;
+            System.out.println("Кот по кличке " + this.nickname + " стог пробежать дистанцию в " + maxDistance + " метров.");
+        } else if (maxDistance >= 100) {
+            maxDistance = 100;
+            System.out.println("Кот по кличке " + this.nickname + " пробежал " + maxDistance + " метров, но ему лень бежать бельше.");
+        }
+        return 0;
+    }
+
+    @Override
+    public int maxHeight() {
+        if (maxHeight >= 0 && maxHeight < 1) {
+            this.maxHeight = maxHeight;
+            System.out.println("Кот по кличке " + this.nickname + " стог перепрыгнуть препятствие в " + maxHeight + " метра.");
+        } else if (maxHeight >= 1) {
+            maxHeight = 1;
+            System.out.println(this.nickname + " лень прыгать выше 1 метра.");
+
+        }
+        return 0;
 
     }
 }

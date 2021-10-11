@@ -1,6 +1,6 @@
 package Homework1;
 
-public class Robot  implements AbilityToJump, AbilityToRun, Compete {
+public class Robot  implements Jumpable, Runnable, Competitor {
     private String model;
     private double runDistance;
     private double jumpHeight;
@@ -59,8 +59,18 @@ public class Robot  implements AbilityToJump, AbilityToRun, Compete {
 
     }
 
-    @Override
-    public void doSomething() {
 
+    @Override
+    public int maxDistance() {
+        System.out.println("Робот модели " + this.model + " не умеет бегать, но идет пешком " + runDistance + " метров.");
+        this.runDistance = runDistance;
+        return 0;
+    }
+
+    @Override
+    public int maxHeight() {
+        System.out.println("Робот модели " + this.model + " не умеет прыгать.");
+        jumpHeight = 0;
+        return 0;
     }
 }

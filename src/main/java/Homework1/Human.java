@@ -1,10 +1,10 @@
 package Homework1;
 
-public class Human implements AbilityToJump, AbilityToRun, Compete {
+public class Human implements Jumpable, Runnable, Competitor {
     private String name;
     private int age;
-    private double runDistance;
-    private double jumpHeight;
+    private int maxDistance = 1000;
+    private int maxHeight = 2;
 
     public Human() {
 
@@ -15,12 +15,6 @@ public class Human implements AbilityToJump, AbilityToRun, Compete {
         this.age = age;
     }
 
-    public Human(String name, int age, double runDistance, double jumpHeight) {
-        this.name = name;
-        this.age = age;
-        this.runDistance = runDistance;
-        this.jumpHeight = jumpHeight;
-    }
 
     public String getName() {
         return name;
@@ -42,39 +36,35 @@ public class Human implements AbilityToJump, AbilityToRun, Compete {
         }
     }
 
-    public double getRunDistance() {
-        return runDistance;
+    public double getMaxDistance() {
+        return maxDistance;
     }
 
-    public void setRunDistance(double runDistance) {
-        if (runDistance >= 0 && runDistance < 1000) {
-            this.runDistance = runDistance;
-            System.out.println("Человек по имени " + this.name + " смог пробежать " + runDistance + " метров.");
-        } else if (runDistance >= 1000) {
-            this.runDistance = 1000;
-            System.out.println("Человек по имени " + this.name + " не смог пробежать " + runDistance + " метров, он выдохся на 1000 метров.");
+    public void setMaxDistance(int maxDistance) {
+        if (maxDistance >= 0 && maxDistance < 1000) {
+            this.maxDistance = maxDistance;
+            System.out.println("Человек по имени " + this.name + " смог пробежать " + maxDistance + " метров.");
+        } else if (maxDistance >= 1000) {
+            this.maxDistance = 1000;
+            System.out.println("Человек по имени " + this.name + " не смог пробежать " + maxDistance + " метров, он выдохся на 1000 метров.");
         }
     }
 
-    public double getJumpHeight() {
-        return jumpHeight;
+    public double getMaxHeight() {
+        return maxHeight;
     }
 
-    public void setJumpHeight(double jumpHeight) {
-        if (jumpHeight >= 0 && jumpHeight < 1.7) {
-            jumpHeight = jumpHeight;
-            System.out.println("Человек по имени " + this.name + " смог перепрыгнуть препятствие в " + jumpHeight + " метра.");
+    public void setMaxHeight(int maxHeight) {
+        if (maxHeight >= 0 && maxHeight < 2) {
+            maxHeight = maxHeight;
+            System.out.println("Человек по имени " + this.name + " смог перепрыгнуть препятствие в " + maxHeight + " метра.");
 
-        } else if (jumpHeight >= 1.7) {
-            jumpHeight = 1.7;
-            System.out.println("Человек по имени " + this.name + " не может перепрыгнуть препятствие в " + jumpHeight + " метра.");
+        } else if (maxHeight >= 2) {
+            maxHeight = 2;
+            System.out.println("Человек по имени " + this.name + " не может перепрыгнуть препятствие в " + maxHeight + " метра.");
         }
     }
 
-    public static void ableToJump() {
-
-
-    }
 
     @Override
     public void jump() {
@@ -87,8 +77,30 @@ public class Human implements AbilityToJump, AbilityToRun, Compete {
         System.out.println(this.name + " бежит");
     }
 
-    @Override
-    public void doSomething() {
 
+    @Override
+    public int maxDistance() {
+        if (maxDistance >= 0 && maxDistance < 1000) {
+            this.maxDistance = maxDistance;
+            System.out.println("Человек по имени " + this.name + " смог пробежать " + maxDistance + " метров.");
+        } else if (maxDistance >= 1000) {
+            this.maxDistance = 1000;
+            System.out.println("Человек по имени " + this.name + " не смог пробежать " + maxDistance + " метров, он выдохся на 1000 метров.");
+        }
+        return maxDistance;
     }
+
+    @Override
+    public int maxHeight() {
+        if (maxHeight >= 0 && maxHeight < 2) {
+            maxHeight = maxHeight;
+            System.out.println("Человек по имени " + this.name + " смог перепрыгнуть препятствие в " + maxHeight + " метра.");
+
+        } else if (maxHeight >= 2) {
+            maxHeight = 2;
+            System.out.println("Человек по имени " + this.name + " не может перепрыгнуть препятствие в " + maxHeight + " метра.");
+        }
+        return 0;
+    }
+
 }

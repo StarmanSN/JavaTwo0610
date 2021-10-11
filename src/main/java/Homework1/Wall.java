@@ -1,32 +1,33 @@
 package Homework1;
 
-public class Wall {
+public class Wall implements Obstacle {
 
-    private double wallHeight;
+    private double height;
 
     public Wall() {
+        height = (int) (Math.random() * 10);
 
     }
 
     public Wall(double wallHeight) {
-        this.wallHeight = wallHeight;
+        this.height = wallHeight;
     }
 
-    public double getWallHeight() {
-        return wallHeight;
+    public double getHeight() {
+        return height;
     }
 
-    public void setWallHeight(double wallHeight) {
-        this.wallHeight = wallHeight;
+    public void setHeight(double height) {
+        this.height = height;
     }
 
     public static void main(String[] args) {
 
-        jumpTheWall();
+        testWall();
     }
 
-    public static void jumpTheWall() {
-        double wallHeight = 0.5;
+    public static void testWall() {
+        int wallHeight = 1;
 
         Human human = new Human("Василий Петрович", 50);
         Cat cat = new Cat("Матроскин", 4);
@@ -36,9 +37,19 @@ public class Wall {
         robot.jump();
         System.out.println();
 
-        human.setJumpHeight(wallHeight);
-        cat.setJumpHeight(wallHeight);
+        human.setMaxHeight(wallHeight);
+        cat.setMaxHeight(wallHeight);
         robot.setJumpHeight(wallHeight);
 
+    }
+
+    @Override
+    public int getDistances() {
+        return 0;
+    }
+
+    @Override
+    public int getHeights() {
+        return 0;
     }
 }

@@ -1,47 +1,37 @@
 package Homework1;
 
-import java.sql.Array;
-import java.util.Arrays;
-
 public class Competition {
     public static void main(String[] args) {
 
-        Human[] humans = new Human[2];
-        Cat[] cats = new Cat[2];
-        Robot[] robots = new Robot[2];
+        Competitor[] competitors = new Competitor[3];
+        competitors[0] = new Human("Вася", 19);
+        competitors[1] = new Cat("Ви", 2);
+        competitors[2] = new Robot("T-800", 2000, 0);
 
-        Wall[] walls = new Wall[2];
-        Track[] tracks = new Track[2];
+        Obstacle[] obstacles = new Obstacle[3];
+        obstacles[0] = new Wall();
+        obstacles[1] = new Track();
+        obstacles[2] = new Track();
 
-        humans[0] = new Human("Вася", 16, 500, 1.5);
-        humans[1] = new Human("Петя", 18, 5500, 1.6);
-        cats[0] = new Cat("Рыжик", 2, 100, 2);
-        cats[1] = new Cat("Серый", 3, 50, 0.5);
-        robots[0] = new Robot("T-700");
-        robots[1] = new Robot("T-800");
-
-        walls[0] = new Wall(0.5);
-        walls[1] = new Wall(1.5);
-        tracks[0] = new Track(50);
-        tracks[1] = new Track(350);
+        competition(competitors, obstacles);
+    }
 
 
-        for (Human human : humans) {
-            System.out.println();
-            human.setRunDistance(human.getRunDistance());
-            human.setJumpHeight(human.getJumpHeight());
-
-        }
-        for (Cat cat : cats) {
-            System.out.println();
-            cat.setRunDistance(cat.getRunDistance());
-            cat.setJumpHeight(cat.getJumpHeight());
-
-        }
-        for (Robot robot : robots) {
-            System.out.println();
-            robot.setRunDistance(10);
-            robot.setJumpHeight(robot.getJumpHeight());
+    public static void competition(Competitor[] competitors, Obstacle[] obstacles) {
+        for (Competitor competitor : competitors) {
+            if (competitor instanceof Runnable) {
+                Runnable runnable = (Runnable) competitor;
+                for (int i = 0; i < competitors.length; i++) {
+                    for (int j = 0; j < obstacles.length; j++) {
+                        if (competitors[i].maxDistance() >= obstacles[j].getDistances() && obstacles[j].getDistances() != 0) {
+                            competitors[i].run();
+                            obstacles[j].getDistances();
+                        } else if (competitors[i].maxHeight() >= obstacles[j].getHeights() && obstacles[j].getHeights() != 0) {
+                            competitors[i].jump();
+                        } else break;
+                    }
+                }
+            }
         }
     }
 }
