@@ -36,8 +36,6 @@ public class User implements Comparable<User> {
                 "age=" + age +
                 '}';
     }
-
-
     @Override
     public int compareTo(User o) { // <0 если меньше 0 равны >0 если больше
         return this.age - o.getAge();
