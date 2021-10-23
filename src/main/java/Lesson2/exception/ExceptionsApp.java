@@ -22,12 +22,12 @@ public class ExceptionsApp {
         try {
             // read
             System.out.println(divFirstAndSecond(args));
-        } catch (ArithmeticException ae) {
+        } catch (ArithmeticException ae) { //ArrayIndexOutOfBoundsException ex (sout "или массив не той длины"
             System.out.println("Попытались поделить на 0");
         } catch (ArrayIndexOutOfBoundsException e) {
             System.out.println("Массив неподходящей длинны");
         } catch (Exception ex) {                 // от меньшего в большему
-            System.out.println("Что-то другое");
+            System.out.println("Что-то другое" + ex.getMessage());
         } finally {
             //close file
             System.out.println("Будет выполнена всегда");
@@ -46,17 +46,19 @@ public class ExceptionsApp {
     /**
      * Передали массив. Вернем результат деления первого на второе.
      * Не умеем делить на 10.
+     *
      * @param array
      * @return
      */
 
-    static int divFirstAndSecond(String[] array) throws MyCustomException{
+    static int divFirstAndSecond(String[] array){ //throws Exception
 
         int a = Integer.parseInt(array[0]);
         int b = Integer.parseInt(array[1]);
         if (b == 10) {
             throw new MyCustomException(10);
+//            throw new IllegalStateException("Не умеем делить на 10");
         }
-        return a/b;
+        return a / b;
     }
 }
