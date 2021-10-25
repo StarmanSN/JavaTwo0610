@@ -1,0 +1,78 @@
+Index: src/main/java/Homework1/AbilityToJump.java
+===================================================================
+diff --git a/src/main/java/Homework1/AbilityToJump.java b/src/main/java/Homework1/Jumpable.java
+rename from src/main/java/Homework1/AbilityToJump.java
+rename to src/main/java/Homework1/Jumpable.java
+--- a/src/main/java/Homework1/AbilityToJump.java	
++++ b/src/main/java/Homework1/Jumpable.java	
+@@ -1,6 +1,6 @@
+ package Homework1;
+ 
+-public interface AbilityToJump {
++public interface Jumpable {
+     default void jump() {
+         System.out.println("Прыгает");
+     }
+Index: src/main/java/Homework1/Cat.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package Homework1;\r\n\r\npublic class Cat implements AbilityToJump, AbilityToRun, Compete {\r\n    private String nickname;\r\n    private int age;\r\n    private double runDistance;\r\n    private double jumpHeight;\r\n\r\n    public Cat() {\r\n\r\n    }\r\n\r\n    public Cat(String nickname, int age) {\r\n        this.nickname = nickname;\r\n        this.age = age;\r\n    }\r\n\r\n    public Cat(String nickname, int age, double runDistance, double jumpHeight) {\r\n        this.nickname = nickname;\r\n        this.age = age;\r\n        this.runDistance = runDistance;\r\n        this.jumpHeight = jumpHeight;\r\n    }\r\n\r\n    public String getNickname() {\r\n        return nickname;\r\n    }\r\n\r\n    public void setNickname(String nickname) {\r\n        this.nickname = nickname;\r\n    }\r\n\r\n    public int getAge() {\r\n        return age;\r\n    }\r\n\r\n    public void setAge(int age) {\r\n        if (age >= 0) {\r\n            this.age = age;\r\n        } else {\r\n            System.out.println(\"Указан некорректный возраст.\");\r\n        }\r\n    }\r\n\r\n    public double getRunDistance() {\r\n        return runDistance;\r\n    }\r\n\r\n    public void setRunDistance(double runDistance) {\r\n        if (runDistance > 0 && runDistance < 100) {\r\n\r\n            this.runDistance = runDistance;\r\n            System.out.println(\"Кот по кличке \" + this.nickname + \" стог пробежать дистанцию в \" + runDistance + \" метров.\");\r\n        } else if (runDistance >= 100) {\r\n            runDistance = 100;\r\n            System.out.println(\"Кот по кличке \" + this.nickname + \" пробежал \" + runDistance + \" метров, но ему лень бежать бельше.\");\r\n        }\r\n    }\r\n\r\n    public double getJumpHeight() {\r\n        return jumpHeight;\r\n    }\r\n\r\n    public void setJumpHeight(double jumpHeight) {\r\n        if (jumpHeight >= 0 && jumpHeight < 1) {\r\n            this.jumpHeight = jumpHeight;\r\n            System.out.println(\"Кот по кличке \" + this.nickname + \" стог перепрыгнуть препятствие в \" + jumpHeight + \" метра.\");\r\n        } else if (jumpHeight >= 1) {\r\n            jumpHeight = 1;\r\n            System.out.println(this.nickname + \" лень прыгать выше 1 метра.\");\r\n        }\r\n\r\n    }\r\n\r\n    @Override\r\n    public void jump() {\r\n        System.out.println(this.nickname + \" хорошо прыгает\");\r\n\r\n    }\r\n\r\n    @Override\r\n    public void run() {\r\n        System.out.println(this.nickname + \" бежит\");\r\n\r\n    }\r\n\r\n    @Override\r\n    public void doSomething() {\r\n\r\n    }\r\n}\r\n
+===================================================================
+diff --git a/src/main/java/Homework1/Cat.java b/src/main/java/Homework1/Cat.java
+--- a/src/main/java/Homework1/Cat.java	
++++ b/src/main/java/Homework1/Cat.java	
+@@ -1,6 +1,6 @@
+ package Homework1;
+ 
+-public class Cat implements AbilityToJump, AbilityToRun, Compete {
++public class Cat implements Jumpable, Runnable, Compete {
+     private String nickname;
+     private int age;
+     private double runDistance;
+Index: src/main/java/Homework1/AbilityToRun.java
+===================================================================
+diff --git a/src/main/java/Homework1/AbilityToRun.java b/src/main/java/Homework1/Runnable.java
+rename from src/main/java/Homework1/AbilityToRun.java
+rename to src/main/java/Homework1/Runnable.java
+--- a/src/main/java/Homework1/AbilityToRun.java	
++++ b/src/main/java/Homework1/Runnable.java	
+@@ -1,6 +1,6 @@
+ package Homework1;
+ 
+-public interface AbilityToRun {
++public interface Runnable {
+     default void run() {
+         System.out.println("Бежит");
+     }
+Index: src/main/java/Homework1/Robot.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package Homework1;\r\n\r\npublic class Robot  implements AbilityToJump, AbilityToRun, Compete {\r\n    private String model;\r\n    private double runDistance;\r\n    private double jumpHeight;\r\n\r\n    public Robot() {\r\n\r\n    }\r\n\r\n    public Robot(String model) {\r\n        this.model = model;\r\n    }\r\n\r\n    public Robot(String nickname, double runDistance, double jumpHeight) {\r\n        this.model = nickname;\r\n        this.runDistance = runDistance;\r\n        this.jumpHeight = jumpHeight;\r\n    }\r\n\r\n    public String getModel() {\r\n        return model;\r\n    }\r\n\r\n    public void setModel(String model) {\r\n        this.model = model;\r\n    }\r\n\r\n    public double getRunDistance() {\r\n//        System.out.println(\"Робот идет пешком.\");\r\n        return runDistance;\r\n\r\n    }\r\n\r\n    public void setRunDistance(double runDistance) {\r\n        System.out.println(\"Робот модели \" + this.model + \" не умеет бегать, но идет пешком \" + runDistance + \" метров.\");\r\n        this.runDistance = runDistance;\r\n    }\r\n\r\n    public double getJumpHeight() {\r\n        return jumpHeight;\r\n    }\r\n\r\n    public void setJumpHeight(double jumpHeight) {\r\n        System.out.println(\"Робот модели \" + this.model + \" не умеет прыгать.\");\r\n        jumpHeight = 0;\r\n    }\r\n\r\n    @Override\r\n    public void jump() {\r\n        System.out.println(this.model + \" не умеет прыгать.\");\r\n\r\n    }\r\n\r\n    @Override\r\n    public void run() {\r\n        System.out.println(this.model + \" не умеет бегать, но идет пешком.\");\r\n\r\n    }\r\n\r\n    @Override\r\n    public void doSomething() {\r\n\r\n    }\r\n}\r\n
+===================================================================
+diff --git a/src/main/java/Homework1/Robot.java b/src/main/java/Homework1/Robot.java
+--- a/src/main/java/Homework1/Robot.java	
++++ b/src/main/java/Homework1/Robot.java	
+@@ -1,6 +1,6 @@
+ package Homework1;
+ 
+-public class Robot  implements AbilityToJump, AbilityToRun, Compete {
++public class Robot  implements Jumpable, Runnable, Compete {
+     private String model;
+     private double runDistance;
+     private double jumpHeight;
+Index: src/main/java/Homework1/Human.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package Homework1;\r\n\r\npublic class Human implements AbilityToJump, AbilityToRun, Compete {\r\n    private String name;\r\n    private int age;\r\n    private double runDistance;\r\n    private double jumpHeight;\r\n\r\n    public Human() {\r\n\r\n    }\r\n\r\n    public Human(String name, int age) {\r\n        this.name = name;\r\n        this.age = age;\r\n    }\r\n\r\n    public Human(String name, int age, double runDistance, double jumpHeight) {\r\n        this.name = name;\r\n        this.age = age;\r\n        this.runDistance = runDistance;\r\n        this.jumpHeight = jumpHeight;\r\n    }\r\n\r\n    public String getName() {\r\n        return name;\r\n    }\r\n\r\n    public void setName(String name) {\r\n        this.name = name;\r\n    }\r\n\r\n    public int getAge() {\r\n        return age;\r\n    }\r\n\r\n    public void setAge(int age) {\r\n        if (age >= 0) {\r\n            this.age = age;\r\n        } else {\r\n            System.out.println(\"Указан некорректный возраст.\");\r\n        }\r\n    }\r\n\r\n    public double getRunDistance() {\r\n        return runDistance;\r\n    }\r\n\r\n    public void setRunDistance(double runDistance) {\r\n        if (runDistance >= 0 && runDistance < 1000) {\r\n            this.runDistance = runDistance;\r\n            System.out.println(\"Человек по имени \" + this.name + \" смог пробежать \" + runDistance + \" метров.\");\r\n        } else if (runDistance >= 1000) {\r\n            this.runDistance = 1000;\r\n            System.out.println(\"Человек по имени \" + this.name + \" не смог пробежать \" + runDistance + \" метров, он выдохся на 1000 метров.\");\r\n        }\r\n    }\r\n\r\n    public double getJumpHeight() {\r\n        return jumpHeight;\r\n    }\r\n\r\n    public void setJumpHeight(double jumpHeight) {\r\n        if (jumpHeight >= 0 && jumpHeight < 1.7) {\r\n            jumpHeight = jumpHeight;\r\n            System.out.println(\"Человек по имени \" + this.name + \" смог перепрыгнуть препятствие в \" + jumpHeight + \" метра.\");\r\n\r\n        } else if (jumpHeight >= 1.7) {\r\n            jumpHeight = 1.7;\r\n            System.out.println(\"Человек по имени \" + this.name + \" не может перепрыгнуть препятствие в \" + jumpHeight + \" метра.\");\r\n        }\r\n    }\r\n\r\n    public static void ableToJump() {\r\n\r\n\r\n    }\r\n\r\n    @Override\r\n    public void jump() {\r\n        System.out.println(this.name + \" прыгает\");\r\n\r\n    }\r\n\r\n    @Override\r\n    public void run() {\r\n        System.out.println(this.name + \" бежит\");\r\n    }\r\n\r\n    @Override\r\n    public void doSomething() {\r\n\r\n    }\r\n}\r\n
+===================================================================
+diff --git a/src/main/java/Homework1/Human.java b/src/main/java/Homework1/Human.java
+--- a/src/main/java/Homework1/Human.java	
++++ b/src/main/java/Homework1/Human.java	
+@@ -1,6 +1,6 @@
+ package Homework1;
+ 
+-public class Human implements AbilityToJump, AbilityToRun, Compete {
++public class Human implements Jumpable, Runnable, Compete {
+     private String name;
+     private int age;
+     private double runDistance;
