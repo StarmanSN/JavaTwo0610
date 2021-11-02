@@ -63,6 +63,7 @@ public class Multithreading {
                 mergedArr[i] = (float) (mergedArr[i] * Math.sin(0.2f + i / 5) * Math.cos(0.2f + i / 5) * Math.cos(0.4f + i / 2));
             }
         });
+
         thread3.start();
 
         System.out.println("Second thread time: " + (System.currentTimeMillis() - startTime) + " ms.");
