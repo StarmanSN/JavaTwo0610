@@ -30,11 +30,7 @@ public class ServerApp {
                         e.printStackTrace();
                     }
                     if (message.equals("/end")) {
-                        try {
-                            out.writeUTF(message);
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
+                        System.out.println("Клиент отключился от сервера!");
                         break;
                     }
                     System.out.println("Клиент прислал: " + message);
