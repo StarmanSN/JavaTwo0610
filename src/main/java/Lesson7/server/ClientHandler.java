@@ -54,6 +54,7 @@ public class ClientHandler {
                     name = nick;
                     sendMessage(Constants.AUTH_OK_COMMAND + " " + nick);
                     server.broadcastMessage(nick + " вошел в чат");
+                    server.broadcastMessage(server.getActiveClients());
                     server.subscribe(this);
                     return;
                 } else {
@@ -75,13 +76,20 @@ public class ClientHandler {
         while (true) {
             String messageFromClient = in.readUTF();
             // hint можем получать команды
-
-            System.out.println("Сообщение от " + name + ": " + messageFromClient);
-            if (messageFromClient.equals(Constants.END_COMMAND)) {
-                break;
+            if (messageFromClient.startsWith(Constants.CLIENTS_LIST_COMMAND)) {
+                sendMessage(server.getActiveClients());
+            } else {
+                System.out.println("Сообщение от " + name + ": " + messageFromClient);
+                if (messageFromClient.equals(Constants.END_COMMAND)) {
+                    break;
+                }
+                server.broadcastMessage(name + ": " + messageFromClient);
             }
-            server.broadcastMessage(name + ": " + messageFromClient);
         }
+    }
+
+    public String getName() {
+        return name;
     }
 
     private void closeConnection() {
