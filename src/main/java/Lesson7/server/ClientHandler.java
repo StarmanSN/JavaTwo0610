@@ -6,6 +6,7 @@ import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.net.Socket;
+import java.util.Optional;
 
 /**
  * Обработчик для конкретного клиента
@@ -46,12 +47,12 @@ public class ClientHandler {
             String str = in.readUTF();
             if (str.startsWith(Constants.AUTH_COMMAND)) {
                 String[] tokens = str.split("\\s+"); // разбитие строки по пробелам / массив длины 3
-                String nick = server.getAuthService().getNickByLoginAndPass(tokens[1], tokens[2]);
+                Optional<String> nick = server.getAuthService().getNickByLoginAndPass(tokens[1], tokens[2]);
 
-                if (nick != null) {
+                if (nick.isPresent()) {
                     //Такого ника нет в чате...
                     //авторизовались
-                    name = nick;
+                    name = nick.get();
                     sendMessage(Constants.AUTH_OK_COMMAND + " " + nick);
                     server.broadcastMessage(nick + " вошел в чат");
                     server.broadcastMessage(server.getActiveClients());
