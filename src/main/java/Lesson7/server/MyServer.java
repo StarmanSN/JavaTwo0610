@@ -9,6 +9,7 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class MyServer {
 
@@ -68,11 +69,16 @@ public class MyServer {
         clients.remove(client);
     }
 
-    public synchronized String  getActiveClients() {
+    public synchronized String getActiveClients() {
         StringBuilder sb = new StringBuilder(Constants.CLIENTS_LIST_COMMAND).append(" ");
-        for (ClientHandler clientHandler : clients) {
+        sb.append(clients.stream()
+                .map(c -> c.getName())
+                .collect(Collectors.joining())
+        );
+
+        /*for (ClientHandler clientHandler : clients) {
             sb.append(clientHandler.getName()).append(" ");
-        }
+        }*/
         return sb.toString();
     }
 }
