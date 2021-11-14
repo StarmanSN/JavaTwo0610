@@ -34,13 +34,11 @@ public class MyServer {
             authService.start();
 
             clients = new ArrayList<>();
-
             while (true) {
                 System.out.println("Сервер ожидает подключения");
                 Socket socket = server.accept();
                 System.out.println("Клиент подключился");
                 new ClientHandler(this, socket);
-
             }
 
         } catch (IOException ex) {
@@ -70,7 +68,7 @@ public class MyServer {
     }
 
     public synchronized String getActiveClients() {
-        StringBuilder sb = new StringBuilder(Constants.CLIENTS_LIST_COMMAND).append(" ");
+        StringBuilder sb = new StringBuilder(Constants.CHECK_COMMAND).append(" ");
         sb.append(clients.stream()
                 .map(c -> c.getName())
                 .collect(Collectors.joining())
@@ -80,5 +78,16 @@ public class MyServer {
             sb.append(clientHandler.getName()).append(" ");
         }*/
         return sb.toString();
+    }
+
+    public synchronized void sendPrivateMessage(ClientHandler from, String nickTo, String message) {
+        for (ClientHandler client : clients) {
+            if (client.getName().equals(nickTo)) {
+                client.sendMessage("Сообщение от " + from.getName() + ": " + message);
+                from.sendMessage("Сообщение клиенту " + nickTo + ": " + message);
+                return;
+            }
+        }
+        from.sendMessage("Участника с ником " + nickTo + "нет в чате");
     }
 }

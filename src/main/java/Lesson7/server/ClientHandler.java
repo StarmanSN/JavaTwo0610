@@ -77,15 +77,21 @@ public class ClientHandler {
         while (true) {
             String messageFromClient = in.readUTF();
             // hint можем получать команды
-            if (messageFromClient.startsWith(Constants.CLIENTS_LIST_COMMAND)) {
+            if (messageFromClient.startsWith(Constants.CHECK_COMMAND)) {
                 sendMessage(server.getActiveClients());
-            } else {
                 System.out.println("Сообщение от " + name + ": " + messageFromClient);
                 if (messageFromClient.equals(Constants.END_COMMAND)) {
                     break;
                 }
-                server.broadcastMessage(name + ": " + messageFromClient);
+                if (messageFromClient.startsWith(Constants.PRIVATE_MESSAGE_COMMAND)) {
+                    String[] tokens = messageFromClient.split("\\s+");
+                    String nick = tokens[1];
+                    String message = messageFromClient.substring(4 + nick.length());
+                    server.sendPrivateMessage(this, nick, message);
+                }
+                continue;
             }
+            server.broadcastMessage(name + ": " + messageFromClient);
         }
     }
 
