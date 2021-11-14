@@ -86,16 +86,19 @@ public class ClientHandler {
             // hint можем получать команды
             if (messageFromClient.startsWith(Constants.CLIENTS_LIST_COMMAND)) {
                 sendMessage(server.getActiveClients());
-            } else {
                 System.out.println("Сообщение от " + name + ": " + messageFromClient);
                 if (messageFromClient.equals(Constants.END_COMMAND)) {
                     break;
                 }
-                /*if (messageFromClient.startsWith("/w " + name + messageFromClient)) {
-                    sendMessage(server.sendPrivateMessage());
-                }*/
-                server.broadcastMessage(name + ": " + messageFromClient);
+                if (messageFromClient.startsWith("/w ")) {
+                    String[] tokens = messageFromClient.split("\\s+");
+                    String nick = tokens[1];
+                    String message = messageFromClient.substring(2 + nick.length());
+                    server.sendPrivateMessage(this, nick, message);
+                }
+                continue;
             }
+            server.broadcastMessage(name + ": " + messageFromClient);
         }
     }
 
