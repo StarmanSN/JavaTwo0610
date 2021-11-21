@@ -19,7 +19,9 @@ public class ClientHandler {
     private DataOutputStream out;
     private String name;
 
-    public ClientHandler(MyServer server, Socket socket) {
+
+    public ClientHandler(MyServer server, Socket socket, int timeout) {
+        timeout = Constants.TIME_OUT;
         try {
             this.server = server;
             this.socket = socket;

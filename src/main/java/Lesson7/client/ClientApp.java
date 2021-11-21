@@ -40,7 +40,7 @@ public class ClientApp extends JFrame {
             try {
                 while (true) {
                     String messageFromServer = dataInputStream.readUTF();
-                    if (messageFromServer.equals("/end")) {
+                    if (messageFromServer.equals(Constants.END_COMMAND)) {
                         break;
                     } else if (messageFromServer.startsWith(Constants.AUTH_OK_COMMAND)) {
                         String[] tokens = messageFromServer.split("\\s+");

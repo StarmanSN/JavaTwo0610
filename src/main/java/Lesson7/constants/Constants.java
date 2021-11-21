@@ -25,4 +25,6 @@ public class Constants {
     public static final String PRIVATE_MESSAGE_COMMAND = "/w ";
 
     public static final String CLIENT_LIST_COMMAND = "/clients";
+
+    public static final int TIME_OUT = 5000;
 }

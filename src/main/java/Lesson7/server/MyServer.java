@@ -7,6 +7,7 @@ import Lesson7.constants.Constants;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.net.SocketException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -28,19 +29,44 @@ public class MyServer {
         return authService;
     }
 
+    public int timeout = Constants.TIME_OUT;
+
     public MyServer() {
         try (ServerSocket server = new ServerSocket(Constants.SERVER_PORT)) {
             authService = new BaseAuthService();
             authService.start();
-
             clients = new ArrayList<>();
+
             while (true) {
                 System.out.println("Сервер ожидает подключения");
                 Socket socket = server.accept();
                 System.out.println("Клиент подключился");
-                new ClientHandler(this, socket);
+                new ClientHandler(this, socket, Constants.TIME_OUT);
+//                try {
+//                    socket.setSoTimeout(timeout);
+//                } catch (Exception e) {
+//                    e.printStackTrace();
+//                }
+//
+                new Thread(() -> {
+                    for (ClientHandler c : clients) {
+                        try {
+                            Thread.sleep(Constants.TIME_OUT);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                        System.out.println("Ждем когда авторизуется");
+                        if (c.getName().isEmpty()) {
+                            try {
+                                socket.close();
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                            }
+                            System.out.println("Не дождались");
+                        }
+                    }
+                }).start();
             }
-
         } catch (IOException ex) {
             System.out.println("Ошибка в работе сервера.");
             ex.printStackTrace();
