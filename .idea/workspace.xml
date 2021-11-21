@@ -4,25 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="94e191b2-cbc4-463b-9152-348a9cd7dccd" name="Changes" comment="1">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Homework1/hw/Cat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Homework1/hw/Competable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Homework1/hw/Human.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Homework1/hw/Jumpable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Homework1/hw/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Homework1/hw/Obstacle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Homework1/hw/Robot.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Homework1/hw/Runnable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Homework1/hw/Treadmill.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Homework1/hw/Wall.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Homework3/CalcDistinct.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Homework3/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Homework3/NewPhonebook.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_10_10_2021_23_15__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_10_10_2021_23_15__Changes_.xml" afterDir="false" />
+    <list default="true" id="94e191b2-cbc4-463b-9152-348a9cd7dccd" name="Changes" comment="Homework8">
+      <change afterPath="$PROJECT_DIR$/identifier.sqlite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javadb.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Lesson10/JdbcApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Lesson10/LambdaApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JavaTwo0610.iml" beforeDir="false" afterPath="$PROJECT_DIR$/JavaTwo0610.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +29,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="Lesson8" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -59,22 +48,29 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="sqlite" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="ToolWindowRun.ShowToolbar" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../JavaFXJavaTwo" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="inlay.hints.JAVA" />
   </component>
-  <component name="RunManager" selected="Application.Main">
-    <configuration name="CalcDistinct" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Homework3.CalcDistinct" />
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="Lesson9.Homework9" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.JdbcApp">
+    <configuration name="ClientApp" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Lesson7.client.ClientApp" />
       <module name="JavaTwo0610" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Homework3.*" />
+          <option name="PATTERN" value="Lesson7.client.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -82,12 +78,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DeadlockApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Lesson5.DeadlockApp" />
+    <configuration name="JdbcApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Lesson10.JdbcApp" />
       <module name="JavaTwo0610" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Lesson5.*" />
+          <option name="PATTERN" value="Lesson10.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -95,12 +91,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Homework3.Main" />
+    <configuration name="ServerApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Lesson7.server.ServerApp" />
       <module name="JavaTwo0610" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Homework3.*" />
+          <option name="PATTERN" value="Lesson7.server.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -108,12 +104,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Homework1.hw.Main" />
+    <configuration name="StreamApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Lesson8.StreamApp" />
       <module name="JavaTwo0610" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Homework1.hw.*" />
+          <option name="PATTERN" value="Lesson8.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -121,8 +117,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WaitNotifyApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Lesson5.WaitNotifyApp" />
+    <configuration name="ThreadApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Lesson5.ThreadApp" />
       <module name="JavaTwo0610" />
       <extension name="coverage">
         <pattern>
@@ -146,19 +142,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.WaitNotifyApp" />
-      <item itemvalue="Application.DeadlockApp" />
-      <item itemvalue="Application.Main" />
-      <item itemvalue="Application.CalcDistinct" />
-      <item itemvalue="Application.Main (1)" />
+      <item itemvalue="Application.ServerApp" />
+      <item itemvalue="Application.StreamApp" />
+      <item itemvalue="Application.ClientApp" />
+      <item itemvalue="Application.ThreadApp" />
+      <item itemvalue="Application.JdbcApp" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
-        <item itemvalue="Application.Main (1)" />
-        <item itemvalue="Application.CalcDistinct" />
-        <item itemvalue="Application.DeadlockApp" />
-        <item itemvalue="Application.WaitNotifyApp" />
+        <item itemvalue="Application.JdbcApp" />
+        <item itemvalue="Application.ClientApp" />
+        <item itemvalue="Application.ServerApp" />
+        <item itemvalue="Application.ThreadApp" />
+        <item itemvalue="Application.StreamApp" />
       </list>
     </recent_temporary>
   </component>
@@ -170,6 +166,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1633630403114</updated>
+      <workItem from="1637498900607" duration="7743000" />
     </task>
     <task id="LOCAL-00001" summary="123">
       <created>1633630607056</created>
@@ -262,8 +259,60 @@
       <option name="project" value="LOCAL" />
       <updated>1635193900493</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Homework8">
+      <created>1636904034477</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1636904034477</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Homework8">
+      <created>1636908364234</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1636908364234</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Lesson9">
+      <created>1636917110969</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1636917110969</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Homework9">
+      <created>1637411110502</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1637411110502</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Homework8">
+      <created>1637495776174</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1637495776174</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Homework8">
+      <created>1637500280795</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1637500280795</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Homework8">
+      <created>1637500328264</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1637500328264</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -287,11 +336,14 @@
     <MESSAGE value="Lesson4" />
     <MESSAGE value="Lesson5" />
     <MESSAGE value="1" />
-    <option name="LAST_COMMIT_MESSAGE" value="1" />
+    <MESSAGE value="Lesson9" />
+    <MESSAGE value="Homework9" />
+    <MESSAGE value="Homework8" />
+    <option name="LAST_COMMIT_MESSAGE" value="Homework8" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/JavaTwo0610$ClientApp.ic" NAME="ClientApp Coverage Results" MODIFIED="1635694831827" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>Homework6.*</FILTER>
+    <SUITE FILE_PATH="coverage/JavaTwo0610$ClientApp.ic" NAME="ClientApp Coverage Results" MODIFIED="1637419549150" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Lesson7.client.*</FILTER>
     </SUITE>
   </component>
 </project>
