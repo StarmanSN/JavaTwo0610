@@ -26,5 +26,5 @@ public class Constants {
 
     public static final String CLIENT_LIST_COMMAND = "/clients";
 
-    public static final int TIME_OUT = 12000;
+    public static final int TIME_OUT = 120000;
 }
