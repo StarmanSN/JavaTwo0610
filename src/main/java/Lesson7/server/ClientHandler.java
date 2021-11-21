@@ -20,8 +20,7 @@ public class ClientHandler {
     private String name;
 
 
-    public ClientHandler(MyServer server, Socket socket, int timeout) {
-        timeout = Constants.TIME_OUT;
+    public ClientHandler(MyServer server, Socket socket) {
         try {
             this.server = server;
             this.socket = socket;

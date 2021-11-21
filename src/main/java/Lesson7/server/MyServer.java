@@ -41,22 +41,16 @@ public class MyServer {
                 System.out.println("Сервер ожидает подключения");
                 Socket socket = server.accept();
                 System.out.println("Клиент подключился");
-                new ClientHandler(this, socket, Constants.TIME_OUT);
-//                try {
-//                    socket.setSoTimeout(timeout);
-//                } catch (Exception e) {
-//                    e.printStackTrace();
-//                }
-//
+                new ClientHandler(this, socket);
                 new Thread(() -> {
                     for (ClientHandler c : clients) {
+                        System.out.println("Ждем когда авторизуется");
                         try {
                             Thread.sleep(Constants.TIME_OUT);
                         } catch (InterruptedException e) {
                             e.printStackTrace();
                         }
-                        System.out.println("Ждем когда авторизуется");
-                        if (c.getName().isEmpty()) {
+                        if (System.currentTimeMillis() > Constants.TIME_OUT) {
                             try {
                                 socket.close();
                             } catch (IOException e) {
