@@ -4,14 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="94e191b2-cbc4-463b-9152-348a9cd7dccd" name="Changes" comment="Homework8">
-      <change afterPath="$PROJECT_DIR$/identifier.sqlite" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javadb.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Lesson10/JdbcApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Lesson10/LambdaApp.java" afterDir="false" />
+    <list default="true" id="94e191b2-cbc4-463b-9152-348a9cd7dccd" name="Changes" comment="Lesson10">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/131ec5ac-3aa3-447f-9633-8160f30e3aaf.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/3b0ab26a-edda-4be2-acaf-bb4d16c73c3c.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/7d64ea2c-adbe-47ac-94db-0f4a4fdd3147.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/82223ad9-7e2d-4c8b-aabe-5cac82a752b1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/ab9534df-a352-4c0c-b470-1947e40b2832.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/d9048458-1c6c-441f-88b5-733317030e2f.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_xerial_sqlite_jdbc_3_34_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dir/demo.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Lesson11/BufferedIOApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Lesson11/ByteStreamApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Lesson11/DataIOApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Lesson11/FileApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Lesson11/FileIOApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Lesson11/ObjectIOApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Lesson11/TryWithResourcesApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Lesson11/WriterApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaTwo0610.iml" beforeDir="false" afterPath="$PROJECT_DIR$/JavaTwo0610.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadb.db" beforeDir="false" afterPath="$PROJECT_DIR$/javadb.db" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +45,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Lesson8" />
+        <entry key="$PROJECT_DIR$" value="Lesson10" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -64,13 +80,13 @@
       <recent name="Lesson9.Homework9" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.JdbcApp">
-    <configuration name="ClientApp" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Lesson7.client.ClientApp" />
+  <component name="RunManager" selected="Application.ObjectIOApp">
+    <configuration name="BufferedIOApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Lesson11.BufferedIOApp" />
       <module name="JavaTwo0610" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Lesson7.client.*" />
+          <option name="PATTERN" value="Lesson11.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -78,12 +94,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JdbcApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Lesson10.JdbcApp" />
+    <configuration name="ByteStreamApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Lesson11.ByteStreamApp" />
       <module name="JavaTwo0610" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Lesson10.*" />
+          <option name="PATTERN" value="Lesson11.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -91,12 +107,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ServerApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Lesson7.server.ServerApp" />
+    <configuration name="FileApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Lesson11.FileApp" />
       <module name="JavaTwo0610" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Lesson7.server.*" />
+          <option name="PATTERN" value="Lesson11.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -104,12 +120,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StreamApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Lesson8.StreamApp" />
+    <configuration name="FileIOApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Lesson11.FileIOApp" />
       <module name="JavaTwo0610" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Lesson8.*" />
+          <option name="PATTERN" value="Lesson11.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -117,12 +133,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ThreadApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Lesson5.ThreadApp" />
+    <configuration name="ObjectIOApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Lesson11.ObjectIOApp" />
       <module name="JavaTwo0610" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Lesson5.*" />
+          <option name="PATTERN" value="Lesson11.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -142,19 +158,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.ServerApp" />
-      <item itemvalue="Application.StreamApp" />
-      <item itemvalue="Application.ClientApp" />
-      <item itemvalue="Application.ThreadApp" />
-      <item itemvalue="Application.JdbcApp" />
+      <item itemvalue="Application.FileApp" />
+      <item itemvalue="Application.ByteStreamApp" />
+      <item itemvalue="Application.FileIOApp" />
+      <item itemvalue="Application.BufferedIOApp" />
+      <item itemvalue="Application.ObjectIOApp" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.JdbcApp" />
-        <item itemvalue="Application.ClientApp" />
-        <item itemvalue="Application.ServerApp" />
-        <item itemvalue="Application.ThreadApp" />
-        <item itemvalue="Application.StreamApp" />
+        <item itemvalue="Application.ObjectIOApp" />
+        <item itemvalue="Application.BufferedIOApp" />
+        <item itemvalue="Application.FileIOApp" />
+        <item itemvalue="Application.ByteStreamApp" />
+        <item itemvalue="Application.FileApp" />
       </list>
     </recent_temporary>
   </component>
@@ -166,7 +182,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1633630403114</updated>
-      <workItem from="1637498900607" duration="7743000" />
+      <workItem from="1637498900607" duration="9608000" />
     </task>
     <task id="LOCAL-00001" summary="123">
       <created>1633630607056</created>
@@ -308,7 +324,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637500328264</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Lesson10">
+      <created>1637513681665</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1637513681665</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -339,7 +362,8 @@
     <MESSAGE value="Lesson9" />
     <MESSAGE value="Homework9" />
     <MESSAGE value="Homework8" />
-    <option name="LAST_COMMIT_MESSAGE" value="Homework8" />
+    <MESSAGE value="Lesson10" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lesson10" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/JavaTwo0610$ClientApp.ic" NAME="ClientApp Coverage Results" MODIFIED="1637419549150" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
