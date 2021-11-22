@@ -36,7 +36,13 @@ public class JdbcApp {
     }
 
     private static void disconnect() {
-
+        try {
+            if (statement != null) {
+                statement.close();
+            }
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
         try {
             if (connection != null) {
                 connection.close();
@@ -68,7 +74,7 @@ public class JdbcApp {
         try (PreparedStatement ps = connection.prepareStatement(
                 "insert into students (name, group_name, score) " +
                         "values (?, ?, ?)")) {
-            for (int i = 0; i < 1000; i ++) {
+            for (int i = 0; i < 1000; i++) {
                 ps.setString(1, "Jack" + i);
                 ps.setString(2, "group" + (10 - i));
                 ps.setInt(3, random.nextInt(6));

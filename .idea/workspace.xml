@@ -4,14 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="94e191b2-cbc4-463b-9152-348a9cd7dccd" name="Changes" comment="Homework8">
-      <change afterPath="$PROJECT_DIR$/identifier.sqlite" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javadb.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Lesson10/JdbcApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Lesson10/LambdaApp.java" afterDir="false" />
+    <list default="true" id="94e191b2-cbc4-463b-9152-348a9cd7dccd" name="Changes" comment="Lesson11">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_xerial_sqlite_jdbc_3_34_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaServer.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Lesson7/server/DbAuthService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JavaTwo0610.iml" beforeDir="false" afterPath="$PROJECT_DIR$/JavaTwo0610.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadb.db" beforeDir="false" afterPath="$PROJECT_DIR$/javadb.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Lesson10/JdbcApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Lesson10/JdbcApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Lesson7/server/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Lesson7/server/AuthService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Lesson7/server/MyServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Lesson7/server/MyServer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +34,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Lesson8" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -42,6 +47,9 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="MavenRunner">
+    <option name="skipTests" value="true" />
+  </component>
   <component name="ProjectId" id="1zBnYoPCMTjfsmujVb6h0joLD3q" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -51,20 +59,16 @@
     <property name="DatabaseDriversLRU" value="sqlite" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="ToolWindowRun.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../JavaFXJavaTwo" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="inlay.hints.JAVA" />
   </component>
-  <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="Lesson9.Homework9" />
-    </key>
-  </component>
-  <component name="RunManager" selected="Application.JdbcApp">
+  <component name="RunManager" selected="Application.ClientApp">
     <configuration name="ClientApp" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Lesson7.client.ClientApp" />
       <module name="JavaTwo0610" />
@@ -150,9 +154,9 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.JdbcApp" />
         <item itemvalue="Application.ClientApp" />
         <item itemvalue="Application.ServerApp" />
+        <item itemvalue="Application.JdbcApp" />
         <item itemvalue="Application.ThreadApp" />
         <item itemvalue="Application.StreamApp" />
       </list>
@@ -166,7 +170,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1633630403114</updated>
-      <workItem from="1637498900607" duration="7743000" />
+      <workItem from="1637607975164" duration="4600000" />
     </task>
     <task id="LOCAL-00001" summary="123">
       <created>1633630607056</created>
@@ -259,56 +263,7 @@
       <option name="project" value="LOCAL" />
       <updated>1635193900493</updated>
     </task>
-    <task id="LOCAL-00014" summary="Homework8">
-      <created>1636904034477</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1636904034477</updated>
-    </task>
-    <task id="LOCAL-00015" summary="Homework8">
-      <created>1636908364234</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1636908364234</updated>
-    </task>
-    <task id="LOCAL-00016" summary="Lesson9">
-      <created>1636917110969</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1636917110969</updated>
-    </task>
-    <task id="LOCAL-00017" summary="Homework9">
-      <created>1637411110502</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1637411110502</updated>
-    </task>
-    <task id="LOCAL-00018" summary="Homework8">
-      <created>1637495776174</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1637495776174</updated>
-    </task>
-    <task id="LOCAL-00019" summary="Homework8">
-      <created>1637500280795</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1637500280795</updated>
-    </task>
-    <task id="LOCAL-00020" summary="Homework8">
-      <created>1637500328264</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1637500328264</updated>
-    </task>
-    <option name="localTasksCounter" value="21" />
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -336,10 +291,7 @@
     <MESSAGE value="Lesson4" />
     <MESSAGE value="Lesson5" />
     <MESSAGE value="1" />
-    <MESSAGE value="Lesson9" />
-    <MESSAGE value="Homework9" />
-    <MESSAGE value="Homework8" />
-    <option name="LAST_COMMIT_MESSAGE" value="Homework8" />
+    <option name="LAST_COMMIT_MESSAGE" value="1" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/JavaTwo0610$ClientApp.ic" NAME="ClientApp Coverage Results" MODIFIED="1637419549150" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
