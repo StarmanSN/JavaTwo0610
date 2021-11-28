@@ -53,7 +53,13 @@ public class MyServer {
     }
 
     public synchronized void broadcastMessage(String message) {
-        clients.forEach(client -> client.sendMessage(message));
+        clients.forEach(client -> {
+            try {
+                client.sendMessage(message);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        });
 
 //        for (ClientHandler client : clients) {
 //            client.sendMessage(message);
@@ -81,7 +87,7 @@ public class MyServer {
         return sb.toString();
     }
 
-    public synchronized void sendPrivateMessage(ClientHandler from, String nickTo, String message) {
+    public synchronized void sendPrivateMessage(ClientHandler from, String nickTo, String message) throws IOException {
         for (ClientHandler client : clients) {
             if (client.getName().equals(nickTo)) {
                 client.sendMessage("Сообщение от " + from.getName() + ": " + message);

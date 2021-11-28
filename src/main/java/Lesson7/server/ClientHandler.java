@@ -65,9 +65,11 @@ public class ClientHandler {
         }
     }
 
-    public void sendMessage(String message) {
+    public void sendMessage(String message) throws IOException {
+        ServerHistory.chatHistory(message);
         try {
             out.writeUTF(message);
+
         } catch (IOException e) {
             e.printStackTrace();
         }

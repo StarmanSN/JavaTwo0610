@@ -1,6 +1,7 @@
 package Lesson7.client;
 
 import Lesson7.constants.Constants;
+import Lesson7.server.ServerHistory;
 
 import javax.swing.*;
 import java.awt.*;
@@ -51,6 +52,7 @@ public class ClientApp extends JFrame {
                     } else {
                         textArea.append(messageFromServer);
                         textArea.append("\n");
+                        ServerHistory.clientHistory(messageFromServer);
                     }
                 }
                 textArea.append("Соединение разорвано");
