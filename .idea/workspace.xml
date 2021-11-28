@@ -4,15 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="94e191b2-cbc4-463b-9152-348a9cd7dccd" name="Changes" comment="Homework10">
-      <change afterPath="$PROJECT_DIR$/MessageHistory/chatHistory.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MessageHistory/history.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Lesson7/server/ServerHistory.java" afterDir="false" />
+    <list default="true" id="94e191b2-cbc4-463b-9152-348a9cd7dccd" name="Changes" comment="Homework11">
+      <change afterPath="$PROJECT_DIR$/MessageHistory/history_Optional[nick1].txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MessageHistory/history_Optional[nick2].txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MessageHistory/history_Optional[nick3].txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadb.db" beforeDir="false" afterPath="$PROJECT_DIR$/javadb.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MessageHistory/chatHistory.txt" beforeDir="false" afterPath="$PROJECT_DIR$/MessageHistory/chatHistory.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MessageHistory/history.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Lesson7/client/ClientApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Lesson7/client/ClientApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Lesson7/server/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Lesson7/server/ClientHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Lesson7/server/MyServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Lesson7/server/MyServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Lesson7/server/ServerHistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Lesson7/server/ServerHistory.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,7 +168,7 @@
       <option name="presentableId" value="Default" />
       <updated>1633630403114</updated>
       <workItem from="1637498900607" duration="9608000" />
-      <workItem from="1638097026247" duration="8787000" />
+      <workItem from="1638097026247" duration="10463000" />
     </task>
     <task id="LOCAL-00001" summary="123">
       <created>1633630607056</created>
@@ -317,7 +317,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637513681665</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Homework11">
+      <created>1638108591707</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1638108591708</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -349,7 +356,8 @@
     <MESSAGE value="Homework9" />
     <MESSAGE value="Homework8" />
     <MESSAGE value="Lesson10" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lesson10" />
+    <MESSAGE value="Homework11" />
+    <option name="LAST_COMMIT_MESSAGE" value="Homework11" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

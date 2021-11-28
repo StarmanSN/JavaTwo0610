@@ -1,0 +1,9 @@
+nick2: asdaw awd
+nick2: awd asdawd
+Optional[nick3] вошел в чат
+/ nick1nick2
+nick3: awd awd
+nick3:  awdawdaw
+nick3: awd a
+nick3: da w awd
+nick1: awd aw d
