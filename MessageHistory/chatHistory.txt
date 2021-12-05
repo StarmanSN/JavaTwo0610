@@ -30,3 +30,5 @@ nick3: da w awd
 nick1: awd aw d
 nick1: awd aw d
 nick1: awd aw d
+/authok Optional[nick1]
+nick1: 05/12

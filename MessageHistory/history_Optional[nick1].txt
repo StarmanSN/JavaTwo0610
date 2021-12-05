@@ -13,3 +13,4 @@ nick3:  awdawdaw
 nick3: awd a
 nick3: da w awd
 nick1: awd aw d
+nick1: 05/12

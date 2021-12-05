@@ -10,6 +10,9 @@ import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.io.*;
 import java.net.Socket;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
 
 public class ClientApp extends JFrame {
 
@@ -35,7 +38,8 @@ public class ClientApp extends JFrame {
         socket = new Socket(Constants.SERVER_ADRESS, Constants.SERVER_PORT);
         dataInputStream = new DataInputStream(socket.getInputStream());
         dataOutputStream = new DataOutputStream(socket.getOutputStream());
-        new Thread(() -> {
+        ExecutorService executorService = Executors.newCachedThreadPool();
+        Future<?> future = executorService.submit(() -> {
             try {
                 while (true) {
                     String messageFromServer = dataInputStream.readUTF();
@@ -70,7 +74,8 @@ public class ClientApp extends JFrame {
             } catch (Exception ex) {
                 ex.printStackTrace();
             }
-        }).start();
+        });
+        executorService.shutdown();
     }
 
     private void closeConnection() {

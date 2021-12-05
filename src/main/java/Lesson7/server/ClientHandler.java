@@ -7,6 +7,10 @@ import java.io.DataOutputStream;
 import java.io.IOException;
 import java.net.Socket;
 import java.util.Optional;
+import java.util.concurrent.Executor;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
 
 /**
  * Обработчик для конкретного клиента
@@ -25,7 +29,20 @@ public class ClientHandler {
             this.socket = socket;
             this.in = new DataInputStream(socket.getInputStream());
             this.out = new DataOutputStream(socket.getOutputStream());
-            new Thread(() -> {
+            ExecutorService executorService = Executors.newFixedThreadPool(3);
+            Future<?> future = executorService.submit(() -> {
+                try {
+                    authentification();
+                    readMessage();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                } finally {
+                    closeConnection();
+                }
+            });
+            executorService.shutdown();
+
+           /* new Thread(() -> {
                 try {
                     authentification();
                     readMessage();
@@ -34,7 +51,7 @@ public class ClientHandler {
                 } finally {
                     closeConnection();
                 }
-            }).start();
+            }).start();*/
 
         } catch (IOException ex) {
             throw new RuntimeException("Проблемы при создании обработчика");
