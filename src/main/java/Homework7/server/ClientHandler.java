@@ -1,16 +1,11 @@
-package Lesson7.server;
+package Homework7.server;
 
-import Lesson7.constants.Constants;
+import Homework7.constants.Constants;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.net.Socket;
-import java.util.Optional;
-import java.util.concurrent.Executor;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.Future;
 
 /**
  * Обработчик для конкретного клиента
@@ -23,27 +18,14 @@ public class ClientHandler {
     private DataOutputStream out;
     private String name;
 
-
     public ClientHandler(MyServer server, Socket socket) {
         try {
             this.server = server;
             this.socket = socket;
             this.in = new DataInputStream(socket.getInputStream());
             this.out = new DataOutputStream(socket.getOutputStream());
-            ExecutorService executorService = Executors.newFixedThreadPool(3);
-            Future<?> future = executorService.submit(() -> {
-                try {
-                    authentification();
-                    readMessage();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                } finally {
-                    closeConnection();
-                }
-            });
-            executorService.shutdown();
-
-           /* new Thread(() -> {
+            this.name = "";
+            new Thread(() -> {
                 try {
                     authentification();
                     readMessage();
@@ -52,8 +34,7 @@ public class ClientHandler {
                 } finally {
                     closeConnection();
                 }
-            }).start();*/
-
+            }).start();
         } catch (IOException ex) {
             throw new RuntimeException("Проблемы при создании обработчика");
         }
@@ -65,17 +46,20 @@ public class ClientHandler {
             String str = in.readUTF();
             if (str.startsWith(Constants.AUTH_COMMAND)) {
                 String[] tokens = str.split("\\s+"); // разбитие строки по пробелам / массив длины 3
-                Optional<String> nick = server.getAuthService().getNickByLoginAndPass(tokens[1], tokens[2]);
-
-                if (nick.isPresent()) {
-                    //Такого ника нет в чате...
-                    //авторизовались
-                    name = nick.get();
-                    sendMessage(Constants.AUTH_OK_COMMAND + " " + nick);
-                    server.broadcastMessage(nick + " вошел в чат");
-                    server.broadcastMessage(server.getActiveClients());
-                    server.subscribe(this);
-                    return;
+                String nick = server.getAuthService().getNickByLoginAndPass(tokens[1], tokens[2]);
+                if (nick != null) {
+                    if (!server.isNickBusy(nick)) {
+                        //Такого ника нет в чате...
+                        //авторизовались
+                        name = nick;
+                        sendMessage(Constants.AUTH_OK_COMMAND + " " + nick);
+                        server.broadcastMessage(nick + " вошел в чат");
+                        server.broadcastMessage(server.getActiveClients());
+                        server.subscribe(this);
+                        return;
+                    } else {
+                        sendMessage("Учетная запись уже используется");
+                    }
                 } else {
                     sendMessage("Неверные логин/пароль");
                 }
@@ -83,11 +67,9 @@ public class ClientHandler {
         }
     }
 
-    public void sendMessage(String message) throws IOException {
-        ServerHistory.chatHistory(message);
+    public void sendMessage(String message) {
         try {
             out.writeUTF(message);
-
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -95,18 +77,23 @@ public class ClientHandler {
 
     private void readMessage() throws IOException {
         while (true) {
-            String messageFromClient = in.readUTF();
+            String messageFromClient = null;
+            try {
+                messageFromClient = in.readUTF();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
             // hint можем получать команды
-            if (messageFromClient.startsWith(Constants.CHECK_COMMAND)) {
+            if (messageFromClient.startsWith(Constants.CLIENTS_LIST_COMMAND)) {
                 sendMessage(server.getActiveClients());
                 System.out.println("Сообщение от " + name + ": " + messageFromClient);
                 if (messageFromClient.equals(Constants.END_COMMAND)) {
                     break;
                 }
-                if (messageFromClient.startsWith(Constants.PRIVATE_MESSAGE_COMMAND)) {
+                if (messageFromClient.startsWith("/w ")) {
                     String[] tokens = messageFromClient.split("\\s+");
                     String nick = tokens[1];
-                    String message = messageFromClient.substring(4 + nick.length());
+                    String message = messageFromClient.substring(2 + nick.length());
                     server.sendPrivateMessage(this, nick, message);
                 }
                 continue;

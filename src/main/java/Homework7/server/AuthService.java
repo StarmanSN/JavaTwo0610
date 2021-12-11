@@ -1,7 +1,4 @@
-package Lesson7.server;
-
-import java.sql.SQLException;
-import java.util.Optional;
+package Homework7.server;
 
 /**
  * Сервис аутентификации
@@ -11,7 +8,7 @@ public interface AuthService {
     /**
      * Запустить сервис
      */
-    void start() throws SQLException;
+    void start();
 
     /**
      * Откдючить сервис
@@ -24,5 +21,5 @@ public interface AuthService {
      * @param pass
      * @return никнейм если найден или null, если такого нет
      */
-    Optional<String> getNickByLoginAndPass(String login, String pass);
+    String getNickByLoginAndPass(String login, String pass);
 }
