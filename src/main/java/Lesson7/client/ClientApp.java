@@ -13,8 +13,6 @@ import java.io.IOException;
 import java.net.Socket;
 
 public class ClientApp extends JFrame {
-
-
     private JTextField textField;
     private JTextArea textArea;
 
@@ -116,13 +114,6 @@ public class ClientApp extends JFrame {
         JButton authButton = new JButton("Войти");
         loginPanel.add(authButton, BorderLayout.EAST);
         add(loginPanel, BorderLayout.NORTH);
-
-        JPanel onlineClientsPanel = new JPanel(new BorderLayout());
-        JTextField onlineClientsField = new JTextField();
-        onlineClientsPanel.add(onlineClientsField, BorderLayout.CENTER);
-        JButton refresh = new JButton("Обновить");
-        onlineClientsPanel.add(refresh, BorderLayout.SOUTH);
-        add(onlineClientsPanel, BorderLayout.EAST);
 
         authButton.addActionListener(new ActionListener() {
             @Override
