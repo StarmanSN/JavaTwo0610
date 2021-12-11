@@ -5,10 +5,6 @@
       <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="SQLITE" exact-version="0" />
       <schema-mapping />
     </data-source>
-    <data-source name="javadb.db" uuid="7d64ea2c-adbe-47ac-94db-0f4a4fdd3147">
-      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="SQLITE" exact-version="0" />
-      <schema-mapping />
-    </data-source>
     <data-source name="identifier" uuid="131ec5ac-3aa3-447f-9633-8160f30e3aaf">
       <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="SQLITE" exact-version="0" />
       <schema-mapping />
