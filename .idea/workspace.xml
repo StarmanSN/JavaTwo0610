@@ -4,8 +4,6 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="94e191b2-cbc4-463b-9152-348a9cd7dccd" name="Changes" comment="Lesson12">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Homework/ABCApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Lesson7/client/ClientApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Lesson7/client/ClientApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Lesson7/server/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Lesson7/server/ClientHandler.java" afterDir="false" />
@@ -61,13 +59,6 @@
       <recent name="Lesson9.Homework9" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ClientApp">
-    <configuration name="ABCApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Homework.ABCApp" />
-      <module name="JavaTwo0610" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Homework.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -75,12 +66,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ClientApp" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Lesson7.client.ClientApp" />
-      <module name="JavaTwo0610" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Lesson7.client.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -88,12 +73,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JdbcApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Lesson10.JdbcApp" />
-      <module name="JavaTwo0610" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Lesson10.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -101,12 +80,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ServerApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Lesson7.server.ServerApp" />
-      <module name="JavaTwo0610" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Lesson7.server.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -114,12 +87,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ThreadApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Lesson5.ThreadApp" />
       <module name="JavaTwo0610" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Lesson5.*" />
+          <option name="PATTERN" value="Lesson12.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -139,19 +110,6 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.ClientApp" />
-      <item itemvalue="Application.ThreadApp" />
-      <item itemvalue="Application.JdbcApp" />
-      <item itemvalue="Application.ABCApp" />
-      <item itemvalue="Application.ServerApp" />
-    </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.ClientApp" />
-        <item itemvalue="Application.ServerApp" />
-        <item itemvalue="Application.ABCApp" />
-        <item itemvalue="Application.JdbcApp" />
-        <item itemvalue="Application.ThreadApp" />
       </list>
     </recent_temporary>
   </component>
@@ -354,16 +312,6 @@
     <MESSAGE value="Lesson10" />
     <MESSAGE value="Homework11" />
     <option name="LAST_COMMIT_MESSAGE" value="Homework11" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <breakpoint enabled="true" type="java-exception">
-          <properties class="java.io.EOFException" package="java.io" />
-          <option name="timeStamp" value="1" />
-        </breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/JavaTwo0610$ClientApp.ic" NAME="ClientApp Coverage Results" MODIFIED="1637419549150" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
