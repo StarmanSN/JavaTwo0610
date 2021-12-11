@@ -32,3 +32,11 @@ nick1: awd aw d
 nick1: awd aw d
 /authok Optional[nick1]
 nick1: 05/12
+/authok Optional[nick1]
+/authok Optional[nick2]
+Optional[nick2] вошел в чат
+/ nick1
+nick2: asdawd
+nick2: asdawd
+nick1: awd awdasd
+nick1: awd awdasd
