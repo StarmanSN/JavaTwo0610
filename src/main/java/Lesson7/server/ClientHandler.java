@@ -23,6 +23,7 @@ public class ClientHandler {
     private DataOutputStream out;
     private String name;
 
+
     public ClientHandler(MyServer server, Socket socket) {
         try {
             this.server = server;

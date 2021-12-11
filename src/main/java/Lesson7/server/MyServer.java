@@ -7,7 +7,6 @@ import Lesson7.constants.Constants;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -29,20 +28,38 @@ public class MyServer {
         return authService;
     }
 
+    public int timeout = Constants.TIME_OUT;
+
     public MyServer() {
         try (ServerSocket server = new ServerSocket(Constants.SERVER_PORT)) {
             authService = new DbAuthService();
             authService.start();
-
             clients = new ArrayList<>();
+
             while (true) {
                 System.out.println("Сервер ожидает подключения");
                 Socket socket = server.accept();
                 System.out.println("Клиент подключился");
                 new ClientHandler(this, socket);
+                new Thread(() -> {
+                    for (ClientHandler c : clients) {
+                        System.out.println("Ждем когда авторизуется");
+                        try {
+                            Thread.sleep(Constants.TIME_OUT);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                        if (System.currentTimeMillis() > Constants.TIME_OUT) {
+                            try {
+                                socket.close();
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                            }
+                            System.out.println("Не дождались");
+                        }
+                    }
+                }).start();
             }
-
-        } catch (IOException | SQLException ex) {
             System.out.println("Ошибка в работе сервера.");
             ex.printStackTrace();
         } finally {
