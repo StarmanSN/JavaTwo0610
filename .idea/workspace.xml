@@ -4,15 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="94e191b2-cbc4-463b-9152-348a9cd7dccd" name="Changes" comment="Homework11">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Lesson12/CounterApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Lesson12/DeadLockApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Lesson12/ExecutorApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Lesson12/Interrupt2App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Lesson12/InterruptApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Lesson12/ThreadApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaTwo0610.iml" beforeDir="false" afterPath="$PROJECT_DIR$/JavaTwo0610.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Lesson7/client/ClientApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Lesson7/client/ClientApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Lesson7/server/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Lesson7/server/ClientHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,7 +24,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="Lesson12" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -65,13 +59,6 @@
       <recent name="Lesson9.Homework9" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ExecutorApp">
-    <configuration name="CounterApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Lesson12.CounterApp" />
-      <module name="JavaTwo0610" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Lesson12.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -79,12 +66,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DeadLockApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Lesson12.DeadLockApp" />
-      <module name="JavaTwo0610" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Lesson12.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -92,12 +73,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ExecutorApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Lesson12.ExecutorApp" />
-      <module name="JavaTwo0610" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Lesson12.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -105,12 +80,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Interrupt2App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Lesson12.Interrupt2App" />
-      <module name="JavaTwo0610" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Lesson12.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -118,8 +87,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InterruptApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Lesson12.InterruptApp" />
       <module name="JavaTwo0610" />
       <extension name="coverage">
         <pattern>
@@ -143,19 +110,6 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.CounterApp" />
-      <item itemvalue="Application.DeadLockApp" />
-      <item itemvalue="Application.InterruptApp" />
-      <item itemvalue="Application.Interrupt2App" />
-      <item itemvalue="Application.ExecutorApp" />
-    </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.ExecutorApp" />
-        <item itemvalue="Application.Interrupt2App" />
-        <item itemvalue="Application.InterruptApp" />
-        <item itemvalue="Application.DeadLockApp" />
-        <item itemvalue="Application.CounterApp" />
       </list>
     </recent_temporary>
   </component>
@@ -169,7 +123,6 @@
       <updated>1633630403114</updated>
       <workItem from="1637498900607" duration="9608000" />
       <workItem from="1638097026247" duration="10463000" />
-      <workItem from="1638623108722" duration="3527000" />
     </task>
     <task id="LOCAL-00001" summary="123">
       <created>1633630607056</created>

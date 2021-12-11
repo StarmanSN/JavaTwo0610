@@ -1,16 +1,18 @@
 package Lesson7.client;
 
 import Lesson7.constants.Constants;
+import Lesson7.server.ServerHistory;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
-import java.io.IOException;
+import java.io.*;
 import java.net.Socket;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
 
 public class ClientApp extends JFrame {
 
@@ -36,7 +38,8 @@ public class ClientApp extends JFrame {
         socket = new Socket(Constants.SERVER_ADRESS, Constants.SERVER_PORT);
         dataInputStream = new DataInputStream(socket.getInputStream());
         dataOutputStream = new DataOutputStream(socket.getOutputStream());
-        new Thread(() -> {
+        ExecutorService executorService = Executors.newCachedThreadPool();
+        Future<?> future = executorService.submit(() -> {
             try {
                 while (true) {
                     String messageFromServer = dataInputStream.readUTF();
@@ -51,6 +54,18 @@ public class ClientApp extends JFrame {
                     } else {
                         textArea.append(messageFromServer);
                         textArea.append("\n");
+
+                        File history = new File("MessageHistory");
+                        if (!history.exists()) {
+                            history.mkdirs();
+                        }
+                        File file = new File(history, "history_" + login + ".txt");
+                        if (!file.exists()) {
+                            file.createNewFile();
+                        }
+                        try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(file, true))) {
+                            bufferedWriter.append(messageFromServer + "\n");
+                        }
                     }
                 }
                 textArea.append("Соединение разорвано");
@@ -59,7 +74,8 @@ public class ClientApp extends JFrame {
             } catch (Exception ex) {
                 ex.printStackTrace();
             }
-        }).start();
+        });
+        executorService.shutdown();
     }
 
     private void closeConnection() {

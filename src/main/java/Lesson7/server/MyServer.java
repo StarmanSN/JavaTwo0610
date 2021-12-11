@@ -7,6 +7,7 @@ import Lesson7.constants.Constants;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -30,7 +31,7 @@ public class MyServer {
 
     public MyServer() {
         try (ServerSocket server = new ServerSocket(Constants.SERVER_PORT)) {
-            authService = new BaseAuthService();
+            authService = new DbAuthService();
             authService.start();
 
             clients = new ArrayList<>();
@@ -41,7 +42,7 @@ public class MyServer {
                 new ClientHandler(this, socket);
             }
 
-        } catch (IOException ex) {
+        } catch (IOException | SQLException ex) {
             System.out.println("Ошибка в работе сервера.");
             ex.printStackTrace();
         } finally {
@@ -52,7 +53,13 @@ public class MyServer {
     }
 
     public synchronized void broadcastMessage(String message) {
-        clients.forEach(client -> client.sendMessage(message));
+        clients.forEach(client -> {
+            try {
+                client.sendMessage(message);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        });
 
 //        for (ClientHandler client : clients) {
 //            client.sendMessage(message);
@@ -80,7 +87,7 @@ public class MyServer {
         return sb.toString();
     }
 
-    public synchronized void sendPrivateMessage(ClientHandler from, String nickTo, String message) {
+    public synchronized void sendPrivateMessage(ClientHandler from, String nickTo, String message) throws IOException {
         for (ClientHandler client : clients) {
             if (client.getName().equals(nickTo)) {
                 client.sendMessage("Сообщение от " + from.getName() + ": " + message);
