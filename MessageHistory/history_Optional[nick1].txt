@@ -1,0 +1,17 @@
+nick1: asdasd w
+nick1: awd asdawd
+nick1: awda sdaw d
+nick1: adw asd 
+Optional[nick2] вошел в чат
+/ nick1
+nick2: asdaw awd
+nick2: awd asdawd
+Optional[nick3] вошел в чат
+/ nick1nick2
+nick3: awd awd
+nick3:  awdawdaw
+nick3: awd a
+nick3: da w awd
+nick1: awd aw d
+nick1: 05/12
+null вышел из чата

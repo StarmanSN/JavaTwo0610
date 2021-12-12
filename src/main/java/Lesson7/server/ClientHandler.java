@@ -7,6 +7,10 @@ import java.io.DataOutputStream;
 import java.io.IOException;
 import java.net.Socket;
 import java.util.Optional;
+import java.util.concurrent.Executor;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
 
 /**
  * Обработчик для конкретного клиента
@@ -19,13 +23,27 @@ public class ClientHandler {
     private DataOutputStream out;
     private String name;
 
+
     public ClientHandler(MyServer server, Socket socket) {
         try {
             this.server = server;
             this.socket = socket;
             this.in = new DataInputStream(socket.getInputStream());
             this.out = new DataOutputStream(socket.getOutputStream());
-            new Thread(() -> {
+            ExecutorService executorService = Executors.newFixedThreadPool(3);
+            Future<?> future = executorService.submit(() -> {
+                try {
+                    authentification();
+                    readMessage();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                } finally {
+                    closeConnection();
+                }
+            });
+            executorService.shutdown();
+
+           /* new Thread(() -> {
                 try {
                     authentification();
                     readMessage();
@@ -34,7 +52,7 @@ public class ClientHandler {
                 } finally {
                     closeConnection();
                 }
-            }).start();
+            }).start();*/
 
         } catch (IOException ex) {
             throw new RuntimeException("Проблемы при создании обработчика");
@@ -65,9 +83,11 @@ public class ClientHandler {
         }
     }
 
-    public void sendMessage(String message) {
+    public void sendMessage(String message) throws IOException {
+        ServerHistory.chatHistory(message);
         try {
             out.writeUTF(message);
+
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -77,15 +97,21 @@ public class ClientHandler {
         while (true) {
             String messageFromClient = in.readUTF();
             // hint можем получать команды
-            if (messageFromClient.startsWith(Constants.CLIENTS_LIST_COMMAND)) {
+            if (messageFromClient.startsWith(Constants.CHECK_COMMAND)) {
                 sendMessage(server.getActiveClients());
-            } else {
                 System.out.println("Сообщение от " + name + ": " + messageFromClient);
                 if (messageFromClient.equals(Constants.END_COMMAND)) {
                     break;
                 }
-                server.broadcastMessage(name + ": " + messageFromClient);
+                if (messageFromClient.startsWith(Constants.PRIVATE_MESSAGE_COMMAND)) {
+                    String[] tokens = messageFromClient.split("\\s+");
+                    String nick = tokens[1];
+                    String message = messageFromClient.substring(4 + nick.length());
+                    server.sendPrivateMessage(this, nick, message);
+                }
+                continue;
             }
+            server.broadcastMessage(name + ": " + messageFromClient);
         }
     }
 

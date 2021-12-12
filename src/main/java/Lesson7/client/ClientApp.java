@@ -1,19 +1,20 @@
 package Lesson7.client;
 
 import Lesson7.constants.Constants;
+import Lesson7.server.ServerHistory;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
-import java.io.IOException;
+import java.awt.event.KeyAdapter;
+import java.io.*;
 import java.net.Socket;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
 
-public class EchoClient extends JFrame {
-
-
+public class ClientApp extends JFrame {
     private JTextField textField;
     private JTextArea textArea;
 
@@ -22,7 +23,7 @@ public class EchoClient extends JFrame {
     private DataOutputStream dataOutputStream;
     private String login;
 
-    public EchoClient() {
+    public ClientApp() {
         try {
             openConnection();
         } catch (IOException e) {
@@ -35,21 +36,34 @@ public class EchoClient extends JFrame {
         socket = new Socket(Constants.SERVER_ADRESS, Constants.SERVER_PORT);
         dataInputStream = new DataInputStream(socket.getInputStream());
         dataOutputStream = new DataOutputStream(socket.getOutputStream());
-        new Thread(() -> {
+        ExecutorService executorService = Executors.newCachedThreadPool();
+        Future<?> future = executorService.submit(() -> {
             try {
                 while (true) {
                     String messageFromServer = dataInputStream.readUTF();
-                    if (messageFromServer.equals("/end")) {
+                    if (messageFromServer.equals(Constants.END_COMMAND)) {
                         break;
                     } else if (messageFromServer.startsWith(Constants.AUTH_OK_COMMAND)) {
                         String[] tokens = messageFromServer.split("\\s+");
                         this.login = tokens[1];
-                        textArea.append("Успешно авторизован как " + login);
-                    } else if (messageFromServer.startsWith(Constants.CLIENTS_LIST_COMMAND)) {
+                        textArea.append("Успешно авторизован как " + login + "\n");
+                    } else if (messageFromServer.startsWith(Constants.CLIENT_LIST_COMMAND)) {
                         // Список клиентов
                     } else {
                         textArea.append(messageFromServer);
                         textArea.append("\n");
+
+                        File history = new File("MessageHistory");
+                        if (!history.exists()) {
+                            history.mkdirs();
+                        }
+                        File file = new File(history, "history_" + login + ".txt");
+                        if (!file.exists()) {
+                            file.createNewFile();
+                        }
+                        try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(file, true))) {
+                            bufferedWriter.append(messageFromServer + "\n");
+                        }
                     }
                 }
                 textArea.append("Соединение разорвано");
@@ -58,24 +72,22 @@ public class EchoClient extends JFrame {
             } catch (Exception ex) {
                 ex.printStackTrace();
             }
-        }).start();
+        });
+        executorService.shutdown();
     }
 
     private void closeConnection() {
         try {
             dataOutputStream.close();
         } catch (Exception ex) {
-
         }
         try {
             dataInputStream.close();
         } catch (Exception ex) {
-
         }
         try {
             socket.close();
         } catch (Exception ex) {
-
         }
     }
 
@@ -94,15 +106,16 @@ public class EchoClient extends JFrame {
 
     private void prepareUI() {
         setBounds(200, 200, 500, 500);
-        setTitle("EchoClient");
+        setTitle("ICQ");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         textArea = new JTextArea();
         textArea.setEditable(false);
         textArea.setLineWrap(true);
+
         add(new JScrollPane(textArea), BorderLayout.CENTER);
 
         JPanel panel = new JPanel(new BorderLayout());
-        JButton button = new JButton("Send");
+        JButton button = new JButton("Отправить");
         panel.add(button, BorderLayout.EAST);
         textField = new JTextField();
         panel.add(textField, BorderLayout.CENTER);
@@ -114,7 +127,7 @@ public class EchoClient extends JFrame {
         loginPanel.add(loginField, BorderLayout.WEST);
         JTextField passField = new JTextField();
         loginPanel.add(passField, BorderLayout.CENTER);
-        JButton authButton = new JButton("Авторизоваться");
+        JButton authButton = new JButton("Войти");
         loginPanel.add(authButton, BorderLayout.EAST);
         add(loginPanel, BorderLayout.NORTH);
 
@@ -146,7 +159,7 @@ public class EchoClient extends JFrame {
     }
 
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(EchoClient::new);
+        SwingUtilities.invokeLater(ClientApp::new);
     }
 
 }

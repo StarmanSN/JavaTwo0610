@@ -1,9 +1,7 @@
 package Lesson8;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class StreamApp {
@@ -37,5 +35,8 @@ public class StreamApp {
 //                        .filter(s -> s.length() == 4)
 //                        .map()
 
+        Map<String, Integer> map = stringStream
+                .collect(Collectors.toMap(str -> str, str -> 1, (v1, v2) -> v1 + 1));
+        System.out.println(map);
     }
 }
