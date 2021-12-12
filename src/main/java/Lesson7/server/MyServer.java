@@ -7,6 +7,7 @@ import Lesson7.constants.Constants;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -60,8 +61,12 @@ public class MyServer {
                     }
                 }).start();
             }
+
+        } catch (SQLException throwables) {
             System.out.println("Ошибка в работе сервера.");
-            ex.printStackTrace();
+            throwables.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
         } finally {
             if (authService != null) {
                 authService.stop();

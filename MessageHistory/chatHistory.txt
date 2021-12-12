@@ -40,3 +40,5 @@ nick2: asdawd
 nick2: asdawd
 nick1: awd awdasd
 nick1: awd awdasd
+/authok Optional[nick1]
+null вышел из чата
