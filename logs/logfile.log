@@ -1,0 +1,24 @@
+INFO  2021-12-12 12:47:16 [main] Lesson14.CurrentClass (CurrentClass.java:36) - Info
+WARN  2021-12-12 12:47:16 [main] Lesson14.CurrentClass (CurrentClass.java:37) - Warn
+ERROR 2021-12-12 12:47:16 [main] Lesson14.CurrentClass (CurrentClass.java:38) - Error
+FATAL 2021-12-12 12:47:16 [main] Lesson14.CurrentClass (CurrentClass.java:39) - Fatal
+DEBUG 2021-12-12 12:48:49 [main] Lesson14.CurrentClass (CurrentClass.java:35) - Debug
+INFO  2021-12-12 12:48:49 [main] Lesson14.CurrentClass (CurrentClass.java:36) - Info
+WARN  2021-12-12 12:48:49 [main] Lesson14.CurrentClass (CurrentClass.java:37) - Warn
+ERROR 2021-12-12 12:48:49 [main] Lesson14.CurrentClass (CurrentClass.java:38) - Error
+FATAL 2021-12-12 12:48:49 [main] Lesson14.CurrentClass (CurrentClass.java:39) - Fatal
+DEBUG 2021-12-12 12:54:03 [main] Lesson14.CurrentClass (CurrentClass.java:21) - a = 50
+DEBUG 2021-12-12 12:54:03 [main] Lesson14.CurrentClass (CurrentClass.java:26) - b = 10
+DEBUG 2021-12-12 12:54:03 [main] Lesson14.CurrentClass (CurrentClass.java:35) - Debug
+INFO  2021-12-12 12:54:03 [main] Lesson14.CurrentClass (CurrentClass.java:36) - Info
+WARN  2021-12-12 12:54:03 [main] Lesson14.CurrentClass (CurrentClass.java:37) - Warn
+ERROR 2021-12-12 12:54:03 [main] Lesson14.CurrentClass (CurrentClass.java:38) - Error
+FATAL 2021-12-12 12:54:03 [main] Lesson14.CurrentClass (CurrentClass.java:39) - Fatal
+DEBUG 2021-12-12 12:55:15 [main] Lesson14.CurrentClass (CurrentClass.java:21) - a = 50
+DEBUG 2021-12-12 12:55:15 [main] Lesson14.CurrentClass (CurrentClass.java:26) - b = 10
+INFO  2021-12-12 12:55:15 [main] Lesson14.CurrentClass (CurrentClass.java:31) - c = 50 + 10 + 60
+DEBUG 2021-12-12 12:55:15 [main] Lesson14.CurrentClass (CurrentClass.java:36) - Debug
+INFO  2021-12-12 12:55:15 [main] Lesson14.CurrentClass (CurrentClass.java:37) - Info
+WARN  2021-12-12 12:55:15 [main] Lesson14.CurrentClass (CurrentClass.java:38) - Warn
+ERROR 2021-12-12 12:55:15 [main] Lesson14.CurrentClass (CurrentClass.java:39) - Error
+FATAL 2021-12-12 12:55:15 [main] Lesson14.CurrentClass (CurrentClass.java:40) - Fatal
