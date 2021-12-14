@@ -4,20 +4,6 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cfd636a0-f24d-4876-b26a-c55bf34897a8" name="Changes" comment="Homework11">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Lesson14/Homework/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/MainTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MessageHistory/chatHistory.txt" beforeDir="false" afterPath="$PROJECT_DIR$/MessageHistory/chatHistory.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MessageHistory/history_Optional[nick1].txt" beforeDir="false" afterPath="$PROJECT_DIR$/MessageHistory/history_Optional[nick1].txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MessageHistory/history_Optional[nick2].txt" beforeDir="false" afterPath="$PROJECT_DIR$/MessageHistory/history_Optional[nick2].txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/logfile.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/logfile.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Lesson7/client/ClientApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Lesson7/client/ClientApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Lesson7/server/BaseAuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Lesson7/server/BaseAuthService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Lesson7/server/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Lesson7/server/ClientHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Lesson7/server/DbAuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Lesson7/server/DbAuthService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Lesson7/server/MyServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Lesson7/server/MyServer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,12 +20,11 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Lesson12" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="22HzB6VcAwBru9qXOZaPuwcRm5k" />
+
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -48,11 +33,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="advanced.settings" />
+
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -128,11 +109,7 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ClientApp" />
-        <item itemvalue="Application.ServerApp" />
-        <item itemvalue="JUnit.MainTest.test" />
-        <item itemvalue="JUnit.MainTest.test (1)" />
-        <item itemvalue="Application.Main" />
+
       </list>
     </recent_temporary>
   </component>
@@ -146,14 +123,7 @@
       <updated>1639300675839</updated>
     </task>
     <task active="true" id="Default" summary="Default task">
-      <changelist id="cfd636a0-f24d-4876-b26a-c55bf34897a8" name="Changes" comment="Homework11" />
-      <created>1639509169295</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1639509169295</updated>
-      <workItem from="1639509179733" duration="1182000" />
-    </task>
-    <option name="localTasksCounter" value="2" />
+
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -173,7 +143,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Homework11" />
-    <option name="LAST_COMMIT_MESSAGE" value="Homework11" />
+    <MESSAGE value="Lesson" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lesson" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/JavaTwo0610$ClientApp.ic" NAME="ClientApp Coverage Results" MODIFIED="1637419549150" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
