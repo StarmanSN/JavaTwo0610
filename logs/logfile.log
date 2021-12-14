@@ -22,3 +22,39 @@ INFO  2021-12-12 12:55:15 [main] Lesson14.CurrentClass (CurrentClass.java:37) - 
 WARN  2021-12-12 12:55:15 [main] Lesson14.CurrentClass (CurrentClass.java:38) - Warn
 ERROR 2021-12-12 12:55:15 [main] Lesson14.CurrentClass (CurrentClass.java:39) - Error
 FATAL 2021-12-12 12:55:15 [main] Lesson14.CurrentClass (CurrentClass.java:40) - Fatal
+INFO  2021-12-12 18:54:50 [main] Lesson7.server.MyServer (MyServer.java:42) - Сервер запущен
+INFO  2021-12-12 18:54:50 [main] Lesson7.server.MyServer (MyServer.java:47) - Сервер ожидает подключения
+INFO  2021-12-12 18:55:15 [main] Lesson7.server.MyServer (MyServer.java:50) - Клиент подключился
+INFO  2021-12-12 18:55:15 [main] Lesson7.server.MyServer (MyServer.java:47) - Сервер ожидает подключения
+INFO  2021-12-12 19:01:07 [main] Lesson7.server.MyServer (MyServer.java:42) - Сервер запущен
+INFO  2021-12-12 19:01:07 [main] Lesson7.server.MyServer (MyServer.java:47) - Сервер ожидает подключения
+INFO  2021-12-12 19:01:12 [main] Lesson7.server.MyServer (MyServer.java:50) - Клиент подключился
+INFO  2021-12-12 19:01:12 [main] Lesson7.server.MyServer (MyServer.java:47) - Сервер ожидает подключения
+INFO  2021-12-12 19:01:36 [pool-2-thread-1] Lesson7.server.MyServer (MyServer.java:92) - Отправлено сообщение: nick1nick1: dasdwad 
+INFO  2021-12-12 19:01:56 [main] Lesson7.server.MyServer (MyServer.java:50) - Клиент подключился
+INFO  2021-12-12 19:01:56 [main] Lesson7.server.MyServer (MyServer.java:47) - Сервер ожидает подключения
+INFO  2021-12-12 19:01:56 [Thread-1] Lesson7.server.MyServer (MyServer.java:55) - Ждем когда клиент авторизуется
+INFO  2021-12-12 19:02:04 [pool-3-thread-1] Lesson7.server.MyServer (MyServer.java:92) - Отправлено сообщение: nick1Optional[nick2] вошел в чат
+INFO  2021-12-12 19:02:04 [pool-3-thread-1] Lesson7.server.MyServer (MyServer.java:92) - Отправлено сообщение: nick1/ nick1
+INFO  2021-12-12 19:02:37 [pool-3-thread-1] Lesson7.server.MyServer (MyServer.java:92) - Отправлено сообщение: nick1nick2: \w nick1 привет
+INFO  2021-12-12 19:02:37 [pool-3-thread-1] Lesson7.server.MyServer (MyServer.java:92) - Отправлено сообщение: nick2nick2: \w nick1 привет
+INFO  2021-12-12 19:02:55 [pool-3-thread-1] Lesson7.server.MyServer (MyServer.java:120) - Сообщение от nick2: привет
+INFO  2021-12-12 19:03:11 [pool-2-thread-1] Lesson7.server.MyServer (MyServer.java:92) - Отправлено сообщение: nick1nick1: при
+INFO  2021-12-12 19:03:11 [pool-2-thread-1] Lesson7.server.MyServer (MyServer.java:92) - Отправлено сообщение: nick2nick1: при
+INFO  2021-12-12 19:03:24 [pool-2-thread-1] Lesson7.server.MyServer (MyServer.java:92) - Отправлено сообщение: nick1nick1: ыфв
+INFO  2021-12-12 19:03:24 [pool-2-thread-1] Lesson7.server.MyServer (MyServer.java:92) - Отправлено сообщение: nick2nick1: ыфв
+INFO  2021-12-12 19:03:27 [pool-3-thread-1] Lesson7.server.MyServer (MyServer.java:92) - Отправлено сообщение: nick1nick2: фыв
+INFO  2021-12-12 19:03:27 [pool-3-thread-1] Lesson7.server.MyServer (MyServer.java:92) - Отправлено сообщение: nick2nick2: фыв
+INFO  2021-12-12 19:03:35 [pool-3-thread-1] Lesson7.server.MyServer (MyServer.java:92) - Отправлено сообщение: nick1nick2 вышел из чата
+INFO  2021-12-12 19:11:49 [main] Lesson7.server.MyServer (MyServer.java:42) - Сервер запущен
+INFO  2021-12-12 19:11:49 [main] Lesson7.server.MyServer (MyServer.java:47) - Сервер ожидает подключения
+INFO  2021-12-12 19:11:54 [main] Lesson7.server.MyServer (MyServer.java:50) - Клиент подключился
+INFO  2021-12-12 19:11:54 [main] Lesson7.server.MyServer (MyServer.java:47) - Сервер ожидает подключения
+INFO  2021-12-12 19:12:24 [pool-2-thread-1] Lesson7.server.MyServer (MyServer.java:92) - Отправлено сообщение: nick1nick1: dsad
+INFO  2021-12-12 19:12:29 [pool-2-thread-1] Lesson7.server.ClientHandler (ClientHandler.java:98) - nick1 вышел из чата
+INFO  2021-12-12 19:14:48 [main] Lesson7.server.MyServer (MyServer.java:42) - Сервер запущен
+INFO  2021-12-12 19:14:48 [main] Lesson7.server.MyServer (MyServer.java:47) - Сервер ожидает подключения
+INFO  2021-12-12 19:14:53 [main] Lesson7.server.MyServer (MyServer.java:50) - Клиент подключился
+INFO  2021-12-12 19:14:53 [main] Lesson7.server.MyServer (MyServer.java:47) - Сервер ожидает подключения
+INFO  2021-12-12 19:15:04 [pool-2-thread-1] Lesson7.server.MyServer (MyServer.java:101) - клиент с ником nick1 вошел в чат
+INFO  2021-12-12 19:15:10 [pool-2-thread-1] Lesson7.server.ClientHandler (ClientHandler.java:98) - nick1 вышел из чата

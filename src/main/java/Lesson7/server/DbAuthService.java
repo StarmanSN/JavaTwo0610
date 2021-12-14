@@ -37,7 +37,6 @@ public class DbAuthService implements AuthService {
     @Override
     public Optional<String> getNickByLoginAndPass(String login, String pass) {
         try {
-            start();
             try (ResultSet rs = statement.executeQuery("SELECT * from Users")) {
                 while (rs.next()) {
                     if (rs.getString(1).equals(login) && rs.getString(2).equals(pass)) {
@@ -47,8 +46,6 @@ public class DbAuthService implements AuthService {
             }
         } catch (SQLException ex) {
             ex.printStackTrace();
-        } finally {
-            stop();
         }
         return null;
     }
