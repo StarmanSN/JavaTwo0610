@@ -15,8 +15,6 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
 public class ClientApp extends JFrame {
-
-
     private JTextField textField;
     private JTextArea textArea;
 
