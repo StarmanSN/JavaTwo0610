@@ -4,20 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cfd636a0-f24d-4876-b26a-c55bf34897a8" name="Changes" comment="Homework11">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Lesson14/Homework/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/MainTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="cfd636a0-f24d-4876-b26a-c55bf34897a8" name="Changes" comment="Homework14">
+      <change afterPath="$PROJECT_DIR$/src/test/java/GetArrTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MessageHistory/chatHistory.txt" beforeDir="false" afterPath="$PROJECT_DIR$/MessageHistory/chatHistory.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MessageHistory/history_Optional[nick1].txt" beforeDir="false" afterPath="$PROJECT_DIR$/MessageHistory/history_Optional[nick1].txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MessageHistory/history_Optional[nick2].txt" beforeDir="false" afterPath="$PROJECT_DIR$/MessageHistory/history_Optional[nick2].txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/logfile.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/logfile.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Lesson7/client/ClientApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Lesson7/client/ClientApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Lesson7/server/BaseAuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Lesson7/server/BaseAuthService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Lesson7/server/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Lesson7/server/ClientHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Lesson7/server/DbAuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Lesson7/server/DbAuthService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Lesson7/server/MyServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Lesson7/server/MyServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Lesson14/Homework/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Lesson14/Homework/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/MainTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CheckArrTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +30,14 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="4a095988-a677-481b-8912-330759225c27" />
+        <option name="url" value="git@github.com:StarmanSN/JavaTwo0610.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
   <component name="ProjectId" id="22HzB6VcAwBru9qXOZaPuwcRm5k" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -59,20 +58,7 @@
       <recent name="C:\Java\Geekbrains\JavaTwo0610\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ClientApp">
-    <configuration name="ClientApp" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Lesson7.client.ClientApp" />
-      <module name="JavaTwo0610" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Lesson7.client.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.CheckArrTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Lesson14.Homework.Main" />
       <module name="JavaTwo0610" />
@@ -86,53 +72,58 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ServerApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Lesson7.server.ServerApp" />
+    <configuration name="CheckArrTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JavaTwo0610" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Lesson7.server.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CheckArrTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MainTest.test (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CheckArrTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JavaTwo0610" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="MainTest" />
-      <option name="METHOD_NAME" value="test(int[])" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MainTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="JavaTwo0610" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="MainTest" />
+      <option name="MAIN_CLASS_NAME" value="CheckArrTest" />
       <option name="METHOD_NAME" value="test" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CheckArrTest.test2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JavaTwo0610" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CheckArrTest" />
+      <option name="METHOD_NAME" value="test2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GetArrTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JavaTwo0610" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="GetArrTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="Application.ServerApp" />
-      <item itemvalue="Application.ClientApp" />
+      <item itemvalue="JUnit.CheckArrTest.test" />
+      <item itemvalue="JUnit.CheckArrTest" />
+      <item itemvalue="JUnit.GetArrTest" />
+      <item itemvalue="JUnit.CheckArrTest.test2" />
       <item itemvalue="Application.Main" />
-      <item itemvalue="JUnit.MainTest.test" />
-      <item itemvalue="JUnit.MainTest.test (1)" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ClientApp" />
-        <item itemvalue="Application.ServerApp" />
-        <item itemvalue="JUnit.MainTest.test" />
-        <item itemvalue="JUnit.MainTest.test (1)" />
+        <item itemvalue="JUnit.CheckArrTest" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.CheckArrTest.test" />
+        <item itemvalue="JUnit.CheckArrTest.test2" />
+        <item itemvalue="JUnit.GetArrTest" />
       </list>
     </recent_temporary>
   </component>
@@ -152,8 +143,19 @@
       <option name="presentableId" value="Default" />
       <updated>1639509169295</updated>
       <workItem from="1639509179733" duration="1182000" />
+      <workItem from="1639510399122" duration="1173000" />
+      <workItem from="1639511982458" duration="73000" />
+      <workItem from="1639819947060" duration="300000" />
+      <workItem from="1639820342018" duration="5091000" />
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Homework14">
+      <created>1639510666663</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1639510666663</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -173,7 +175,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Homework11" />
-    <option name="LAST_COMMIT_MESSAGE" value="Homework11" />
+    <MESSAGE value="Homework14" />
+    <option name="LAST_COMMIT_MESSAGE" value="Homework14" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/JavaTwo0610$ClientApp.ic" NAME="ClientApp Coverage Results" MODIFIED="1637419549150" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

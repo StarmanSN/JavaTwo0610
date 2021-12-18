@@ -3,10 +3,8 @@ package Lesson14.Homework;
 import java.util.Arrays;
 
 public class Main {
-    int[] arr = {1, 2, 3, 4, 5, 1, 2, 3, 5};
-    int[] arr2 = {1, 4, 1, 4, 4, 4, 1};
 
-    public int[] getArr(int[] arr) {
+    public static int[] getArr(int[] arr) {
         int x = 0;
         int[] result = null;
         for (int i = 0; i < arr.length; i++) {
@@ -28,11 +26,10 @@ public class Main {
         return result;
     }
 
-    public boolean checkArr(int[] arr) {
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] != 1 && arr[i] != 4)
-                return false;
-        }
-        return true;
+    public static boolean checkArr(Integer[] arr) {
+        if (Arrays.asList(arr).contains(1) && Arrays.asList(arr).contains(4)) {
+                return true;
+            }
+        return false;
     }
 }
