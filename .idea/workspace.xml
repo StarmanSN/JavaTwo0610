@@ -4,30 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cfd636a0-f24d-4876-b26a-c55bf34897a8" name="Changes" comment="Homework14">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_12_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_12_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_13_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_core_2_11_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_8_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_8_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_8_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_8_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_8_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_8_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_4_1_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_junit_jupiter_4_1_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_3_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Lesson15/Bike.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Lesson15/ConstructorReflectionApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Lesson15/FieldReflectionApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Lesson15/MethodReflectionApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Lesson15/NotSimpleAnnotation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Lesson15/ReflectionApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Lesson15/SimpleAnnotation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="cfd636a0-f24d-4876-b26a-c55bf34897a8" name="Changes" comment="Lesson15">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_13_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Lesson15/Homework/AfterSuite.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Lesson15/Homework/BeforeSuite.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Lesson15/Homework/SomeClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Lesson15/Homework/TestClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/log4j2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JavaTwo0610.iml" beforeDir="false" afterPath="$PROJECT_DIR$/JavaTwo0610.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
@@ -40,8 +24,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -81,7 +65,7 @@
       <recent name="C:\Java\Geekbrains\JavaTwo0610\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MethodReflectionApp">
+  <component name="RunManager" selected="Application.TestClass">
     <configuration name="ConstructorReflectionApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Lesson15.ConstructorReflectionApp" />
       <module name="JavaTwo0610" />
@@ -95,12 +79,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FieldReflectionApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Lesson15.FieldReflectionApp" />
+    <configuration name="CurrentClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Lesson14.CurrentClass" />
       <module name="JavaTwo0610" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Lesson15.*" />
+          <option name="PATTERN" value="Lesson14.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -134,30 +118,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CalculatorTest.testAdditionMultipleWithMethod" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Lesson15.Homework.TestClass" />
       <module name="JavaTwo0610" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CalculatorTest" />
-      <option name="METHOD_NAME" value="testAdditionMultipleWithMethod(int,int,int)" />
-      <option name="TEST_OBJECT" value="method" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Lesson15.Homework.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.CalculatorTest.testAdditionMultipleWithMethod" />
-      <item itemvalue="Application.ReflectionApp" />
-      <item itemvalue="Application.FieldReflectionApp" />
       <item itemvalue="Application.MethodReflectionApp" />
       <item itemvalue="Application.ConstructorReflectionApp" />
+      <item itemvalue="Application.CurrentClass" />
+      <item itemvalue="Application.ReflectionApp" />
+      <item itemvalue="Application.TestClass" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TestClass" />
         <item itemvalue="Application.MethodReflectionApp" />
-        <item itemvalue="Application.ConstructorReflectionApp" />
         <item itemvalue="Application.ReflectionApp" />
-        <item itemvalue="Application.FieldReflectionApp" />
-        <item itemvalue="JUnit.CalculatorTest.testAdditionMultipleWithMethod" />
+        <item itemvalue="Application.ConstructorReflectionApp" />
+        <item itemvalue="Application.CurrentClass" />
       </list>
     </recent_temporary>
   </component>
@@ -181,6 +168,7 @@
       <workItem from="1639511982458" duration="73000" />
       <workItem from="1639819947060" duration="300000" />
       <workItem from="1639820342018" duration="5091000" />
+      <workItem from="1639846601038" duration="3708000" />
     </task>
     <task id="LOCAL-00002" summary="Homework14">
       <created>1639510666663</created>
