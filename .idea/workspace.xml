@@ -4,17 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cfd636a0-f24d-4876-b26a-c55bf34897a8" name="Changes" comment="Lesson15">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_13_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Lesson15/Homework/AfterSuite.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Lesson15/Homework/BeforeSuite.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Lesson15/Homework/SomeClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Lesson15/Homework/TestClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/log4j2.xml" afterDir="false" />
+    <list default="true" id="cfd636a0-f24d-4876-b26a-c55bf34897a8" name="Changes" comment="Homework15">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Lesson15/Homework/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_13_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_13_2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaTwo0610.iml" beforeDir="false" afterPath="$PROJECT_DIR$/JavaTwo0610.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Lesson15/Homework/SomeClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Lesson15/Homework/Car.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Lesson15/Homework/TestClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Lesson15/Homework/TestClass.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,8 +19,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -55,6 +50,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$MAVEN_REPOSITORY$/junit/junit" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -169,6 +165,8 @@
       <workItem from="1639819947060" duration="300000" />
       <workItem from="1639820342018" duration="5091000" />
       <workItem from="1639846601038" duration="3708000" />
+      <workItem from="1639906978175" duration="2218000" />
+      <workItem from="1641375781673" duration="7332000" />
     </task>
     <task id="LOCAL-00002" summary="Homework14">
       <created>1639510666663</created>
@@ -177,7 +175,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639510666663</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Homework15">
+      <created>1639907213232</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1639907213232</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -198,7 +203,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Homework11" />
     <MESSAGE value="Homework14" />
-    <option name="LAST_COMMIT_MESSAGE" value="Homework14" />
+    <MESSAGE value="Homework15" />
+    <option name="LAST_COMMIT_MESSAGE" value="Homework15" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/JavaTwo0610$ClientApp.ic" NAME="ClientApp Coverage Results" MODIFIED="1637419549150" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
