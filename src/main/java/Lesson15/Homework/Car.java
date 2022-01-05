@@ -47,12 +47,12 @@ public class Car {
 
     }
 
-    @Test(priority = 2)
+    @Test
     void drive() {
         System.out.println("Drive");
     }
 
-    @Test(priority = 3)
+    @Test(priority = 9)
     void stop() {
         System.out.println("Stop");
     }
