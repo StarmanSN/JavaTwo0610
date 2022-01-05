@@ -4,10 +4,10 @@ import java.lang.reflect.Method;
 
 public class TestClass {
     public static void main(String[] args) {
-        start2(Car.class);
+        start(Car.class);
     }
 
-    public static void start2(Class classObject) {
+    public static void start(Class classObject) {
         Method[] declaredMethods = classObject.getDeclaredMethods();
         try {
             int count = 0;
