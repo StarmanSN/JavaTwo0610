@@ -1,6 +1,9 @@
 package Lesson7.server;
 
+import Lesson14.CurrentClass;
 import Lesson7.constants.Constants;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
@@ -17,6 +20,7 @@ import java.util.concurrent.Future;
  */
 public class ClientHandler {
 
+    private static final Logger logger = LogManager.getLogger(CurrentClass.class);
     private MyServer server;
     private Socket socket;
     private DataInputStream in;
@@ -43,17 +47,6 @@ public class ClientHandler {
             });
             executorService.shutdown();
 
-           /* new Thread(() -> {
-                try {
-                    authentification();
-                    readMessage();
-                } catch (IOException ex) {
-                    ex.printStackTrace();
-                } finally {
-                    closeConnection();
-                }
-            }).start();*/
-
         } catch (IOException ex) {
             throw new RuntimeException("Проблемы при создании обработчика");
         }
@@ -78,6 +71,7 @@ public class ClientHandler {
                     return;
                 } else {
                     sendMessage("Неверные логин/пароль");
+                    logger.info("Введены неверные логин/пароль");
                 }
             }
         }
@@ -101,6 +95,7 @@ public class ClientHandler {
                 sendMessage(server.getActiveClients());
                 System.out.println("Сообщение от " + name + ": " + messageFromClient);
                 if (messageFromClient.equals(Constants.END_COMMAND)) {
+                    logger.info(name + " вышел из чата");
                     break;
                 }
                 if (messageFromClient.startsWith(Constants.PRIVATE_MESSAGE_COMMAND)) {

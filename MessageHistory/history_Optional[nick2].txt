@@ -7,3 +7,9 @@ nick3:  awdawdaw
 nick3: awd a
 nick3: da w awd
 nick1: awd aw d
+nick2: \w nick1 привет
+/ nick1nick2
+Сообщение клиенту nick1: привет
+nick1: при
+nick1: ыфв
+nick2: фыв

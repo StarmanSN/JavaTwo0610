@@ -42,3 +42,25 @@ nick1: awd awdasd
 nick1: awd awdasd
 /authok Optional[nick1]
 null вышел из чата
+/authok Optional[nick1]
+nick1: dasdwad 
+/authok Optional[nick2]
+Optional[nick2] вошел в чат
+/ nick1
+nick2: \w nick1 привет
+nick2: \w nick1 привет
+/ nick1nick2
+Сообщение от nick2: привет
+Сообщение клиенту nick1: привет
+nick1: при
+nick1: при
+nick1: ыфв
+nick1: ыфв
+nick2: фыв
+nick2: фыв
+nick2 вышел из чата
+/authok Optional[nick1]
+nick1: dsad
+/ nick1
+/authok Optional[nick1]
+/ nick1
