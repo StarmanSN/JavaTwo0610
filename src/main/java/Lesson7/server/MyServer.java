@@ -2,7 +2,10 @@ package Lesson7.server;
 
 //Логика сервера
 
+import Lesson14.CurrentClass;
 import Lesson7.constants.Constants;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.io.IOException;
 import java.net.ServerSocket;
@@ -13,6 +16,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class MyServer {
+    private static final Logger logger = LogManager.getLogger(CurrentClass.class);
 
     /**
      * Сервис аутентификации
@@ -35,16 +39,20 @@ public class MyServer {
         try (ServerSocket server = new ServerSocket(Constants.SERVER_PORT)) {
             authService = new DbAuthService();
             authService.start();
+            logger.info("Сервер запущен");
             clients = new ArrayList<>();
 
             while (true) {
                 System.out.println("Сервер ожидает подключения");
+                logger.info("Сервер ожидает подключения");
                 Socket socket = server.accept();
                 System.out.println("Клиент подключился");
+                logger.info("Клиент подключился");
                 new ClientHandler(this, socket);
                 new Thread(() -> {
                     for (ClientHandler c : clients) {
-                        System.out.println("Ждем когда авторизуется");
+                        System.out.println("Ждем когда клиент авторизуется");
+                        logger.info("Ждем когда клиент авторизуется");
                         try {
                             Thread.sleep(Constants.TIME_OUT);
                         } catch (InterruptedException e) {
@@ -56,20 +64,23 @@ public class MyServer {
                             } catch (IOException e) {
                                 e.printStackTrace();
                             }
-                            System.out.println("Не дождались");
+                            System.out.println("Не дождались авторизации");
+                            logger.info("Не дождались авторизации");
                         }
                     }
                 }).start();
             }
 
         } catch (SQLException throwables) {
-            System.out.println("Ошибка в работе сервера.");
+            System.out.println("Ошибка в работе сервера");
+            logger.info("Ошибка в работе сервера");
             throwables.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
             if (authService != null) {
                 authService.stop();
+                logger.info("Сервер остановлен");
             }
         }
     }
@@ -78,18 +89,16 @@ public class MyServer {
         clients.forEach(client -> {
             try {
                 client.sendMessage(message);
+                logger.info("Отправлено сообщение: " + client.getName() + message);
             } catch (IOException e) {
                 e.printStackTrace();
             }
         });
-
-//        for (ClientHandler client : clients) {
-//            client.sendMessage(message);
-//        }
     }
 
     public synchronized void subscribe(ClientHandler client) {
         clients.add(client);
+        logger.info("клиент с ником " + client.getName() + " вошел в чат");
     }
 
     public synchronized void unsubscribe(ClientHandler client) {
@@ -102,10 +111,6 @@ public class MyServer {
                 .map(c -> c.getName())
                 .collect(Collectors.joining())
         );
-
-        /*for (ClientHandler clientHandler : clients) {
-            sb.append(clientHandler.getName()).append(" ");
-        }*/
         return sb.toString();
     }
 
@@ -113,6 +118,7 @@ public class MyServer {
         for (ClientHandler client : clients) {
             if (client.getName().equals(nickTo)) {
                 client.sendMessage("Сообщение от " + from.getName() + ": " + message);
+                logger.info("Сообщение от " + from.getName() + ": " + message);
                 from.sendMessage("Сообщение клиенту " + nickTo + ": " + message);
                 return;
             }

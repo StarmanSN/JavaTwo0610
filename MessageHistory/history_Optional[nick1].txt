@@ -15,3 +15,15 @@ nick3: da w awd
 nick1: awd aw d
 nick1: 05/12
 null вышел из чата
+nick1: dasdwad 
+Optional[nick2] вошел в чат
+/ nick1
+nick2: \w nick1 привет
+Сообщение от nick2: привет
+nick1: при
+nick1: ыфв
+nick2: фыв
+nick2 вышел из чата
+nick1: dsad
+/ nick1
+/ nick1
