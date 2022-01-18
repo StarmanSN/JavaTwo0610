@@ -111,11 +111,11 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.Main" />
       <item itemvalue="JUnit.CheckArrTest.test" />
       <item itemvalue="JUnit.CheckArrTest" />
       <item itemvalue="JUnit.GetArrTest" />
       <item itemvalue="JUnit.CheckArrTest.test2" />
-      <item itemvalue="Application.Main" />
     </list>
     <recent_temporary>
       <list>
